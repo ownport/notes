@@ -13,7 +13,7 @@ RUN pip install \
         typogrify
 
 RUN mkdir -p /data/bin
-RUN mkdir -p /data/blog
+RUN mkdir -p /data/engine
 
 ADD scripts/create-env.sh /data/bin/
 RUN chmod +x /data/bin/*.sh

@@ -14,8 +14,8 @@ $ docker build -t 'ownport.github.io' .
 Run container and re-generate HTML pages
 
 ```sh
-$ docker run -ti --rm --name 'blog' -v ${pwd}/blog:/data/blog ownport.github.io
-$ cd /data/blog/
+$ docker run -ti --rm --name 'notes' -v ${pwd}/engine:/data/engine ownport.github.io
+$ cd /data/engine/
 $ make html
 $ exit
 ```
@@ -23,7 +23,7 @@ $ exit
 Outside of container update GitHub pages in gh-pages branch
 
 ```sh
-$ ./scripts/ghp-import blog/output/
+$ ./scripts/ghp-import engine/output/
 $ git push origin gh-pages 
 ```
 
