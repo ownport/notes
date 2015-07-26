@@ -58,3 +58,6 @@ target/
 
 # server pid's
 *.pid
+
+# pelican output dir
+blog/output/
