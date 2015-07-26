@@ -60,4 +60,4 @@ target/
 *.pid
 
 # pelican output dir
-blog/output/
+engine/output/
