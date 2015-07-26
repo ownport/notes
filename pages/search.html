@@ -4,7 +4,7 @@
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
   <head>
-    <title>Migrate blog to Pelican and GitHub Pages - ownport.github.io/blog</title>
+    <title>Search - ownport.github.io/blog</title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet" />
@@ -35,7 +35,7 @@
         </div>
         <div class="collapse navbar-collapse navbar-right">
           <ul class="nav navbar-nav">
-            <li><a href="http://ownport.github.io/blog/pages/search.html">Search</a></li>
+            <li class="active"><a href="http://ownport.github.io/blog/pages/search.html">Search</a></li>
             <li><a href="http://ownport.github.io/blog/tags.html">tags</a></li>
           </ul>
         </div>
@@ -46,39 +46,29 @@
     <section id="content" class="article content">
       <header>
         <h2 class="entry-title">
-          Migrate blog to Pelican and GitHub Pages
+          Search
         </h2>
         
-        <div class="text-muted">Fri 24 July 2015</div>
       </header>
 <!-- .entry-content -->
       <div class="entry-content">
-        <h3>Installation</h3>
-<div class="highlight"><pre><span class="nv">$ </span>docker build -t <span class="s1">&#39;ownport.github.io&#39;</span> .
-<span class="nv">$ </span>docker run -ti --rm --name <span class="s1">&#39;blog&#39;</span> -v <span class="si">${</span><span class="nv">pwd</span><span class="si">}</span>/blog:/data/blog ownport.github.io
-</pre></div>
+        <script>
+  (function() {
+    var cx = '009405607506802587119:9g13fzgfwky';
+    var gcse = document.createElement('script');
+    gcse.type = 'text/javascript';
+    gcse.async = true;
+    gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
+        '//cse.google.com/cse.js?cx=' + cx;
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(gcse, s);
+  })();
+</script>
 
-
-<h3>Publishing to GitHub</h3>
-<p><a href="https://help.github.com/categories/20/articles">GitHub Pages</a> offer an easy and convenient way to publish Pelican sites. There are <a href="https://help.github.com/articles/user-organization-and-project-pages">two types of GitHub Pages</a>: Project Pages and User Pages. Pelican sites can be published as both Project Pages and User Pages.</p>
-<h3>Links</h3>
-<ul>
-<li><a href="https://github.com/ownport/ownport.github.io">ownport.github.io</a></li>
-<li><a href="http://blog.getpelican.com/">Pelican</a> Static Site Generator, Powered by Python</li>
-<li><a href="https://pages.github.com/">GitHub Pages</a></li>
-</ul>
+<p><gcse:search></gcse:search></p>
       </div>
 <!-- /.entry-content -->
-      <footer class="post-info text-muted">
-        <button type="button" class="btn btn-default">          
-          <a href="http://ownport.github.io/blog/category/articles.html"><div class="fa fa-lg fa-folder-open"></div> articles</a>
-        </button>
-        <button type="button" class="btn btn-default">
-          <a href="http://ownport.github.io/blog/tag/pelican.html"><div class="fa fa-lg fa-tag"></div> pelican</a>
-        </button>
-      </footer>
-      <!-- /.post-info -->
-    </section>
+    </section>    
     </div>
     <footer class="footer">
       <div class="container">
