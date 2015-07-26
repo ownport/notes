@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>ownport.github.io</title><link href="/" rel="alternate"></link><link href="/feeds/articles.atom.xml" rel="self"></link><id>/</id><updated>2015-07-24T23:30:00+03:00</updated><entry><title>Migrate blog to Pelican and GitHub Pages</title><link href="/migrate-blog-to-pelican-and-github-pages.html" rel="alternate"></link><updated>2015-07-24T23:30:00+03:00</updated><author><name>ownport</name></author><id>tag:,2015-07-24:migrate-blog-to-pelican-and-github-pages.html</id><summary type="html">&lt;h3&gt;Installation&lt;/h3&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="nv"&gt;$ &lt;/span&gt;docker build -t &lt;span class="s1"&gt;&amp;#39;ownport.github.io&amp;#39;&lt;/span&gt; .
+&lt;span class="nv"&gt;$ &lt;/span&gt;docker run -ti --rm --name &lt;span class="s1"&gt;&amp;#39;blog&amp;#39;&lt;/span&gt; -v &lt;span class="si"&gt;${&lt;/span&gt;&lt;span class="nv"&gt;pwd&lt;/span&gt;&lt;span class="si"&gt;}&lt;/span&gt;/blog:/data/blog ownport.github.io
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h3&gt;Publishing to GitHub&lt;/h3&gt;
+&lt;p&gt;&lt;a href="https://help.github.com/categories/20/articles"&gt;GitHub Pages&lt;/a&gt; offer an easy and convenient way to publish Pelican sites. There are &lt;a href="https://help.github.com/articles/user-organization-and-project-pages"&gt;two types of GitHub Pages&lt;/a&gt;: Project Pages and User Pages. Pelican sites can be published as both Project Pages and User Pages.&lt;/p&gt;
+&lt;h3&gt;Links&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://github.com/ownport/ownport.github.io"&gt;ownport.github.io&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://blog.getpelican.com/"&gt;Pelican&lt;/a&gt; Static Site Generator, Powered by Python&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://pages.github.com/"&gt;GitHub Pages&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</summary><category term="pelican"></category></entry></feed>
