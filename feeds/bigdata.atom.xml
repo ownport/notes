@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>ownport.github.io</title><link href="/" rel="alternate"></link><link href="/feeds/bigdata.atom.xml" rel="self"></link><id>/</id><updated>2015-07-25T22:00:00+03:00</updated><entry><title>Hortonworks Data Platform 2.3, Component versions</title><link href="/hortonworks-data-platform-23-component-versions.html" rel="alternate"></link><updated>2015-07-25T22:00:00+03:00</updated><author><name>ownport</name></author><id>tag:,2015-07-25:hortonworks-data-platform-23-component-versions.html</id><summary type="html">&lt;p&gt;&lt;img alt="Hortonworks Data Platform 2.3 Component versions" src="/images/hortonworks-2.3-versions.png" /&gt;&lt;/p&gt;
-&lt;h3&gt;Links&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href="http://hortonworks.com/blog/available-now-hdp-2-3/"&gt;Available Now: HDP 2.3&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</summary><category term="hadoop"></category><category term="hortonworks"></category></entry></feed>
