@@ -4,8 +4,8 @@
 from __future__ import unicode_literals
 
 AUTHOR = u'ownport'
-SITENAME = u'ownport.github.io'
-# SITEURL = u'http://ownport.github.io'
+SITENAME = u'ownport.github.io/blog'
+SITEURL = u'http://ownport.github.io/blog'
 
 PATH = u'content'
 # Static paths
