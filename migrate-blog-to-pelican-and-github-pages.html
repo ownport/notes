@@ -5,6 +5,7 @@
 <!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
   <head>
     <title>Migrate blog to Pelican and GitHub Pages - ownport.github.io/notes</title>
+    <meta name="google-site-verification" content="LmB1dDy5ueSqYPVOs6z4ylRQgNDxelgPYHsRLLtCG7c" />
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet" />
@@ -76,12 +77,34 @@
 
 
 <h3>Plugins</h3>
+<div class="highlight"><pre><span class="n">PLUGIN_PATHS</span> <span class="o">=</span> <span class="p">[</span><span class="s">&#39;plugins&#39;</span><span class="p">]</span>
+<span class="n">PLUGINS</span> <span class="o">=</span> <span class="p">[</span><span class="s">&#39;sitemap&#39;</span><span class="p">,]</span>
+</pre></div>
+
+
 <h4>Links</h4>
 <ul>
 <li><a href="http://docs.getpelican.com/en/3.6.0/plugins.html#how-to-use-plugins">How to use plugins</a></li>
 <li><a href="https://github.com/getpelican/pelican-plugins#plugin-descriptions">Plugin descriptions</a></li>
 </ul>
 <h3>Sitemap</h3>
+<p>Add to pelicanconf.py</p>
+<div class="highlight"><pre><span class="n">SITEMAP</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s">&#39;format&#39;</span><span class="p">:</span> <span class="s">&#39;xml&#39;</span><span class="p">,</span>
+    <span class="s">&#39;priorities&#39;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s">&#39;articles&#39;</span><span class="p">:</span> <span class="mf">0.5</span><span class="p">,</span>
+        <span class="s">&#39;indexes&#39;</span><span class="p">:</span> <span class="mf">0.5</span><span class="p">,</span>
+        <span class="s">&#39;pages&#39;</span><span class="p">:</span> <span class="mf">0.5</span>
+    <span class="p">},</span>
+    <span class="s">&#39;changefreqs&#39;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s">&#39;articles&#39;</span><span class="p">:</span> <span class="s">&#39;monthly&#39;</span><span class="p">,</span>
+        <span class="s">&#39;indexes&#39;</span><span class="p">:</span> <span class="s">&#39;daily&#39;</span><span class="p">,</span>
+        <span class="s">&#39;pages&#39;</span><span class="p">:</span> <span class="s">&#39;monthly&#39;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+
+
 <h3>Links</h3>
 <ul>
 <li><a href="https://github.com/ownport/ownport.github.io">ownport.github.io</a></li>
