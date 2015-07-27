@@ -9,7 +9,7 @@ Personal website, based on [pelican](http://blog.getpelican.com/). Homepage: [ht
 $ docker build -t 'ownport.github.io' .
 ```
 
-## Update siate
+## Update site
 
 Run container and re-generate HTML pages
 
