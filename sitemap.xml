@@ -5,139 +5,139 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>http://ownport.github.io/notes/</loc>
-<lastmod>2015-07-27T06:35:03-00:00</lastmod>
+<lastmod>2015-07-27T07:19:28-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://ownport.github.io/notes/archives.html</loc>
-<lastmod>2015-07-27T06:35:03-00:00</lastmod>
+<lastmod>2015-07-27T07:19:28-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://ownport.github.io/notes/tags.html</loc>
-<lastmod>2015-07-27T06:35:03-00:00</lastmod>
+<lastmod>2015-07-27T07:19:28-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://ownport.github.io/notes/categories.html</loc>
-<lastmod>2015-07-27T06:35:03-00:00</lastmod>
+<lastmod>2015-07-27T07:19:28-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://ownport.github.io/notes/pages/search.html</loc>
-<lastmod>2015-07-27T06:35:03-00:00</lastmod>
+<lastmod>2015-07-27T07:19:28-00:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://ownport.github.io/notes/hortonworks-data-platform-23-component-versions.html</loc>
+<loc>http://ownport.github.io/notes/posts/2015/07/hortonworks-data-platform-23-component-versions.html</loc>
 <lastmod>2015-07-25T22:00:00+03:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://ownport.github.io/notes/links-2015-07-25.html</loc>
+<loc>http://ownport.github.io/notes/posts/2015/07/links-2015-07-25.html</loc>
 <lastmod>2015-07-25T00:20:00+03:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://ownport.github.io/notes/migrate-blog-to-pelican-and-github-pages.html</loc>
+<loc>http://ownport.github.io/notes/posts/2015/07/migrate-blog-to-pelican-and-github-pages.html</loc>
 <lastmod>2015-07-24T23:30:00+03:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://ownport.github.io/notes/links-2015-07-17.html</loc>
+<loc>http://ownport.github.io/notes/posts/2015/07/links-2015-07-17.html</loc>
 <lastmod>2015-07-17T00:00:00+03:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://ownport.github.io/notes/links-2015-06-22.html</loc>
+<loc>http://ownport.github.io/notes/posts/2015/06/links-2015-06-22.html</loc>
 <lastmod>2015-06-22T00:00:00+03:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://ownport.github.io/notes/links-2015-06-19.html</loc>
+<loc>http://ownport.github.io/notes/posts/2015/06/links-2015-06-19.html</loc>
 <lastmod>2015-06-19T00:00:00+03:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://ownport.github.io/notes/links-2015-06-17.html</loc>
+<loc>http://ownport.github.io/notes/posts/2015/06/links-2015-06-17.html</loc>
 <lastmod>2015-06-17T00:00:00+03:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://ownport.github.io/notes/links-2015-06-01.html</loc>
+<loc>http://ownport.github.io/notes/posts/2015/06/links-2015-06-01.html</loc>
 <lastmod>2015-06-01T00:00:00+03:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://ownport.github.io/notes/links-2015-04-30.html</loc>
+<loc>http://ownport.github.io/notes/posts/2015/04/links-2015-04-30.html</loc>
 <lastmod>2015-04-30T00:00:00+03:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://ownport.github.io/notes/links-2015-03-30.html</loc>
+<loc>http://ownport.github.io/notes/posts/2015/03/links-2015-03-30.html</loc>
 <lastmod>2015-03-30T00:00:00+03:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://ownport.github.io/notes/links-2015-03-25.html</loc>
+<loc>http://ownport.github.io/notes/posts/2015/03/links-2015-03-25.html</loc>
 <lastmod>2015-03-25T00:00:00+02:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://ownport.github.io/notes/links-2015-03-24.html</loc>
+<loc>http://ownport.github.io/notes/posts/2015/03/links-2015-03-24.html</loc>
 <lastmod>2015-03-24T00:00:00+02:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://ownport.github.io/notes/links-2015-03-23.html</loc>
+<loc>http://ownport.github.io/notes/posts/2015/03/links-2015-03-23.html</loc>
 <lastmod>2015-03-23T00:00:00+02:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://ownport.github.io/notes/links-2015-03-21.html</loc>
+<loc>http://ownport.github.io/notes/posts/2015/03/links-2015-03-21.html</loc>
 <lastmod>2015-03-21T00:00:00+02:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://ownport.github.io/notes/links-2015-03-19.html</loc>
+<loc>http://ownport.github.io/notes/posts/2015/03/links-2015-03-19.html</loc>
 <lastmod>2015-03-19T00:00:00+02:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
