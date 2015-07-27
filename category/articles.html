@@ -57,7 +57,7 @@
           <p>
             <a href="http://ownport.github.io/notes/migrate-blog-to-pelican-and-github-pages.html" rel="bookmark" title="Permalink to Migrate blog to Pelican and GitHub Pages">Migrate blog to Pelican and GitHub Pages</a>
             <br/>
-            Installation $ docker build -t 'ownport.github.io' . $ docker run -ti --rm --name 'blog' -v ${pwd}/blog:/data/blog ownport.github.io Publishing to GitHub GitHub Pages offer an easy and convenient way to publish Pelican sites. There are two types of GitHub Pages: Project Pages and User Pages. Pelican sites ...
+            Installation $ docker build -t 'ownport.github.io' . Update site Run container and re-generate HTML pages $ docker run -ti --rm --name 'notes' -v ${pwd}/engine:/data/engine ownport.github.io $ cd /data/engine/ $ make html $ exit Publishing to GitHub GitHub Pages offer an easy and convenient way to publish Pelican sites ...
           </p>
         </div>
       </div>
