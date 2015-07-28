@@ -1,0 +1,71 @@
+Title: BigData Distributed Programming links
+Date: 2015-07-28 22:00
+Tags: hadoop, bigdata
+
+- [AddThis Hydra](https://github.com/addthis/hydra): distributed data processing and storage system originally developed at AddThis
+- [Akela](https://github.com/mozilla-metrics/akela): Mozilla's utility library for Hadoop, HBase, Pig, etc.
+- [AMPLab SIMR](http://databricks.github.io/simr/): run Spark on Hadoop MapReduce v1
+- [AMPLab Succinct](http://succinct.cs.berkeley.edu/wp/wordpress/): Enabling Queries on Compressed Data
+- [Apache Crunch](http://crunch.apache.org/): a simple Java API for tasks like joining and data aggregation that are tedious to implement on plain MapReduce
+- [Apache DataFu](http://incubator.apache.org/projects/datafu.html): collection of user-defined functions for Hadoop and Pig developed by LinkedIn
+- [Apache Flink](http://flink.incubator.apache.org/): high-performance runtime, and automatic program optimization
+- [Apache Gora](http://gora.apache.org/): framework for in-memory data model and persistence
+- [Apache Hama](http://hama.apache.org/): BSP (Bulk Synchronous Parallel) computing framework
+- [Apache MapReduce](http://wiki.apache.org/hadoop/MapReduce/): programming model for processing large data sets with a parallel, distributed algorithm on a cluster
+- [Apache Pig](https://pig.apache.org/): high level language to express data analysis programs for Hadoop
+- [Apache S4](http://incubator.apache.org/s4/): framework for stream processing, implementation of S4
+- [Apache Spark](http://spark.incubator.apache.org/): framework for in-memory cluster computing
+- [Apache Spark Streaming](http://spark.incubator.apache.org/docs/0.7.3/streaming-programming-guide.html): framework for stream processing, part of Spark
+- [Apache Storm](http://storm-project.net/): framework for stream processing by Twitter also on YARN
+- [Apache Tez](http://tez.incubator.apache.org/): application framework for executing a complex DAG (directed acyclic graph) of tasks, built on YARN
+- [Apache Twill](https://incubator.apache.org/projects/twill.html): abstraction over YARN that reduces the complexity of developing distributed applications
+- [Cascalog](http://cascalog.org/): data processing and querying library
+- [Cheetah](http://vldbarc.org/pvldb/vldb2010/pvldb_vol3/I08.pdf): High Performance, Custom Data Warehouse on Top of MapReduce
+- [Concurrent Cascading](http://www.cascading.org/): framework for data management/analytics on Hadoop
+- [Damballa Parkour](https://github.com/damballa/parkour): MapReduce library for Clojure
+- [Datasalt Pangool](https://github.com/datasalt/pangool): alternative MapReduce paradigm
+- [DataTorrent StrAM](https://www.datatorrent.com/): real-time engine is designed to enable distributed, asynchronous, real time in-memory big-data computations in as unblocked a way as possible, with minimal overhead and impact on performance
+- [DistributedR](http://www.vertica.com/distributedr/): scalable high-performance platform for the R language
+- [eBay Oink](https://github.com/eBay/oink): REST based interface for PIG execution
+- [Facebook Corona](https://www.facebook.com/notes/facebook-engineering/under-the-hood-scheduling-mapreduce-jobs-more-efficiently-with-corona/10151142560538920): Hadoop enhancement which removes single point of failure
+- [Facebook Peregrine](http://peregrine_mapreduce.bitbucket.org/): Map Reduce framework
+- [Facebook Scuba](https://www.facebook.com/notes/facebook-engineering/under-the-hood-data-diving-with-scuba/10150599692628920): distributed in-memory datastore
+- [Geotrellis](http://geotrellis.io/): geographic data processing engine for high performance applications
+- [GIS Tools for Hadoop](http://esri.github.io/gis-tools-for-hadoop/): Big Data Spatial Analytics for the Hadoop Framework
+- [Google Dataflow](http://googledevelopers.blogspot.it/2014/06/cloud-platform-at-google-io-new-big.html): create data pipelines to help themæingest, transform and analyze data
+- [Google MapReduce](http://research.google.com/archive/mapreduce.html): map reduce framework
+- [Google MillWheel](http://research.google.com/pubs/pub41378.html): fault tolerant stream processing framework
+- [HParser](http://www.informatica.com/us/products/big-data/hparser/): data parsing transformation environment optimized for Hadoop
+- [IBM Streams](http://www.ibm.com/software/products/en/infosphere-streams): advanced analytic platform that allows user-developed applications to quickly ingest, analyze and correlate information as it arrives from thousands of real-time sources
+- [JAQL](https://code.google.com/p/jaql/): declarative programming language for working with structured, semi-structured and unstructured data
+- [Kite](http://kitesdk.org/docs/current/): is a set of libraries, tools, examples, and documentation focused on making it easier to build systems on top of the Hadoop ecosystem
+- [Kryo](https://github.com/EsotericSoftware/kryo): Java serialization and cloning: fast, efficient, automatic
+- [Lipstick](https://github.com/Netflix/Lipstick): Pig workflow visualization tool
+- [Metamarkers Druid](http://druid.io/): framework for real-time analysis of large datasets
+- [Netflix Aegisthus](https://github.com/Netflix/aegisthus): Bulk Data Pipeline out of Cassandra. implements a reader for the SSTable format and provides a map/reduce program to create a compacted snapshot of the data contained in a column family
+- [Netflix Lipstick](https://github.com/Netflix/Lipstick): Pig Visualization framework
+- [Netflix Mantis](http://qconsf.com/presentation/mantis-netflixs-event-stream-processing-system): Event Stream Processing System
+- [Netflix PigPen](https://github.com/Netflix/PigPen): map-reduce for Clojure whiche compiles to Apache Pig
+- [Netflix STAASH](https://github.com/Netflix/staash): language-agnostic as well as storage-agnostic web interface for storing data into persistent storage systems
+- [Netflix Zeno](https://github.com/Netflix/zeno): Netflix's In-Memory Data Propagation Framework
+- [Nextflow](http://www.nextflow.io): Dataflow oriented toolkit for parallel and distributed computational pipelines
+- [Nokia Disco](http://discoproject.org/): MapReduce framework developed by Nokia
+- [PigPen](https://github.com/Netflix/PigPen): PigPen is map-reduce for Clojure, or distributed Clojure. It compiles to Apache Pig, but you don&#8217;t need to know much about Pig to use it
+- [Pinterest Pinlater](http://engineering.pinterest.com/post/91288882494/pinlater-an-asynchronous-job-execution-system): asynchronous job execution system
+- [Pydoop](http://pydoop.sourceforge.net/docs/): Python MapReduce and HDFS API for Hadoop
+- [ScaleOut hServer](http://www.scaleoutsoftware.com/): fast, scalable in-memory data grid for Hadoop
+- [SeqPig](http://seqpig.sourceforge.net/): Simple and scalable scripting for large sequencing data set(ex: bioinfomation) in Hadoop 
+- [SigmoidAnalytics Spork](https://github.com/sigmoidanalytics/spork): Pig on Apache Spark
+- [SpatialHadoop](http://spatialhadoop.cs.umn.edu/): SpatialHadoop is a MapReduce extension to Apache Hadoop designed specially to work with spatial data. 
+- [Spring for Apache Hadoop](http://projects.spring.io/spring-hadoop/): unified configuration model and easy to use APIs for using HDFS, MapReduce, Pig, and Hive
+- [SQLStream Blaze](http://www.sqlstream.com/blaze/): stream processing platform
+- [Stratio Streaming](http://www.openstratio.org/about/stratio-streaming/): the union of a real-time messaging bus with a complex event processing engine using Spark Streaming
+- [Stratosphere](http://stratosphere.eu/): general purpose cluster computing framework
+- [Streamdrill](https://streamdrill.com/): usefull for counting activities of event streams over different time windows and finding the most active one
+- [Teradata QueryGrid](http://it.teradata.com/Teradata-QueryGrid/): data-access layer that can orchestrate multiple modes of analysis across multiple databases plus Hadoop
+- [TIBCO ActiveSpaces](http://www.tibco.com/products/automation/in-memory-computing/in-memory-data-grid/activespaces-enterprise-edition): in-memory data grid
+- [Torch](http://torch.ch/): Scientific computing for LuaJIT
+- [Twitter Scalding](https://github.com/twitter/scalding): Scala library for Map Reduce jobs, built on Cascading
+- [Twitter Summingbird](https://github.com/twitter/summingbird): Streaming MapReduce with Scalding and Storm, by Twitter
+- [Twitter TSAR](https://blog.twitter.com/2014/tsar-a-timeseries-aggregator): TimeSeries AggregatoR by Twitter
+

@@ -2,7 +2,7 @@ Title: Hortonworks Data Platform 2.3, Component versions
 Date: 2015-07-25 22:00
 Tags: hadoop, hortonworks
 
-![Hortonworks Data Platform 2.3 Component versions](images/hortonworks-2.3-versions.png)
+![Hortonworks Data Platform 2.3 Component versions]({attach}/images/hortonworks-2.3-versions.png)
 
 ### Links
 
