@@ -14,19 +14,21 @@ DEFAULT_LANG = u'en'
 # -----------------------------------
 
 PATH = u'content'
-STATIC_PATHS = [
-    # Directories
-    'images', 'pdfs',
-    # Files 
-    'static/robots.txt',
-    'static/googleec9d63c38ebcca03.html',
-]
 
 # path-specific metadata
 EXTRA_PATH_METADATA = {
     'static/robots.txt': {'path': 'robots.txt'},
-    'static/googleec9d63c38ebcca03.html': {'path': 'googleec9d63c38ebcca03.html'},
 }
+
+STATIC_PATHS = [
+    # Directories
+    'images/',
+    # Files 
+    'static/robots.txt',
+]
+
+ARTICLE_URL = 'posts/{date:%Y}/{date:%m}/{slug}.html'
+ARTICLE_SAVE_AS = 'posts/{date:%Y}/{date:%m}/{slug}.html'
 
 # -----------------------------------
 #   Feeds
