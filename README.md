@@ -14,7 +14,7 @@ $ docker build -t 'ownport.github.io' .
 Run container and re-generate HTML pages
 
 ```sh
-$ docker run -ti --rm --name 'notes' -v $(pwd)/engine:/data/engine ownport.github.io
+$ docker run -ti --rm --name 'notes' -v $(pwd)/engine:/data/engine ownport.github.notes
 $ cd /data/engine/
 $ make html
 $ exit
