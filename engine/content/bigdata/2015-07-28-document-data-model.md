@@ -1,6 +1,6 @@
 Title: BigData Document Data Model links
-Date: 2015-07-28 22:00
-Tags: hadoop, bigdata
+Date: 2015-08-23 23:00
+Tags: hadoop, bigdata, document, database
 
 - [Actian Versant](http://www.actian.com/products/operational-databases/): commercial object-oriented database management systems 
 - [Crate Data](https://crate.io/): is an open source massively scalable data store. It requires zero administration
@@ -11,6 +11,6 @@ Tags: hadoop, bigdata
 - [Microsoft DocumentDB](http://azure.microsoft.com/en-us/services/documentdb/): fully-managed, highly-scalable, NoSQL document database service
 - [MongoDB](http://www.mongodb.org/): Document-oriented database system
 - [RavenDB](http://www.ravendb.net/): A transactional, open-source Document Database
-- [RethinkDB](http://www.rethinkdb.com/): document database that supports queries like table joins and group by
+- [RethinkDB](http://www.rethinkdb.com/): document database that supports queries like table joins and group by. Source code: [https://github.com/rethinkdb/rethinkdb](https://github.com/rethinkdb/rethinkdb)
 - [TokuMX](http://www.tokutek.com/products/tokumx-for-mongodb/): High-Performance MongoDB Distribution
 
