@@ -114,4 +114,4 @@ $ sudo pip uninstall powerline
 - [Using Powerline for awesome statuslines](http://agperson.com/entry/4081)
 - [Getting Spiffy With Powerline](http://computers.tutsplus.com/tutorials/getting-spiffy-with-powerline--cms-20740)
 - [erikw/tmux-powerline](https://github.com/erikw/tmux-powerline) Statusbar configuration for tmux that looks like vim-powerline and consist of dynamic segments.
-
+- [Add power to your terminal with powerline](http://fedoramagazine.org/add-power-terminal-powerline/)
