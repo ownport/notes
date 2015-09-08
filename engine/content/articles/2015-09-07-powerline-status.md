@@ -81,7 +81,7 @@ cp -R ${POWERLINE_PATH}/config_files/* ~/.config/powerline
                     {
                             "function": "powerline.segments.shell.jobnum",
                             "priority": 20
-                    }
+                    },
                     {
                             "function": "powerline.segments.shell.last_pipe_status",
                             "priority": 10
