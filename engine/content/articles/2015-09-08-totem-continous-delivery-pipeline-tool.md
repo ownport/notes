@@ -1,4 +1,4 @@
-Title: Totem: continous delivery pipline tool
+Title: Totem: continous delivery pipeline tool
 Date: 2015-09-08 8:30
 Tags: totem, continous delivery, docker, deployment
 
