@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+  <head>
+    <title>Amazon Web Services in Plain English (notes) - ownport.github.io/notes</title>
+    <meta name="google-site-verification" content="LmB1dDy5ueSqYPVOs6z4ylRQgNDxelgPYHsRLLtCG7c" />
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet" />
+    <!--<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css" rel="stylesheet" />-->
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="http://ownport.github.io/notes/theme/style.css" rel="stylesheet" />
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-65731833-1', 'auto');
+      ga('send', 'pageview');
+
+    </script>
+  </head>
+  <body id="index" class="archive">
+    <!--[if lt IE 7]>
+        <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+    <nav class="navbar navbar-default" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="http://ownport.github.io/notes">ownport.github.io/notes</a>
+        </div>
+        <div class="collapse navbar-collapse navbar-right">
+          <ul class="nav navbar-nav">
+            <li><a href="http://ownport.github.io/notes/pages/search.html">Search</a></li>
+            <li><a href="http://ownport.github.io/notes/tags.html">tags</a></li>
+          </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+      </div>
+    </nav>
+    <div class="container">
+    <section id="content" class="article content">
+      <header>
+        <h2 class="entry-title">
+          Amazon Web Services in Plain English (notes)
+        </h2>
+        
+        <div class="text-muted">Tue 08 September 2015</div>
+      </header>
+<!-- .entry-content -->
+      <div class="entry-content">
+        <p>Read original page: <a href="https://www.expeditedssl.com/aws-in-plain-english">Amazon Web Services in Plain English</a></p>
+<h3>Base Services</h3>
+<ul>
+<li>
+<p><code>EC2 (Amazon Virtual Servers)</code>: Host the bits of things you think of as a computer. It's handwavy, but EC2 
+instances are similar to the virtual private servers you'd get at Linode, DigitalOcean or Rackspace</p>
+</li>
+<li>
+<p><code>IAM (Users, Keys and Certs)</code>: Setup additional users, setup new AWS Keys and policies</p>
+</li>
+<li>
+<p><code>S3 (Amazon Unlimited FTP Server)</code>: Store images and other assets for websites. Keep backups and share 
+files between services. Host static websites. Also, many of the other AWS services write and read from S3.</p>
+</li>
+<li>
+<p><code>VPC (Amazon Virtual Colocated Rack)</code>: Overcome objections that "all our stuff is on the Internet!" by 
+adding an additional layer of security. Makes it appears as if all of your AWS services are on the same 
+little network instead of being small pieces in a much bigger network. It's like, if you're familar with networking: VLANs</p>
+</li>
+</ul>
+<h3>Web Developer Services</h3>
+<ul>
+<li>
+<p><code>API Gateway (API Proxy)</code>: Proxy your apps API through this so you can throttle bad client traffic, test 
+new versions, and present methods more cleanly. It's like 3Scale</p>
+</li>
+<li>
+<p><code>RDS (Amazon SQL)</code>: Be your app's Mysql, Postgres, Oracle database. It's like Heroku Postgres</p>
+</li>
+<li>
+<p><code>Route53 (Amazon DNS + Domains)</code>: Buy a new domain, setup the DNS records for that domain. It's like DNSimple, GoDaddy, Gandi</p>
+</li>
+<li>
+<p><code>SES (Amazon Transactional Email)</code>: Send one off emails like password resets, notifications, etc. You could use it send 
+Newsletter if you wrote all the code, but that's not a great idea. It's like SendGrid, Mandrill, Postmark</p>
+</li>
+<li>
+<p><code>Cloudfront (Amazon CDN)</code>: Make your websites load faster by spreading out static file delivery to be closer to where your 
+users are. It's like MaxCDN, Akamai</p>
+</li>
+<li>
+<p><code>CloudSearch (Amazon Fulltext Search)</code>: Pull in data on S3 or in RDS and and then search it for every instance of 'Jimmy'. 
+It's like Sphinx, Solr, ElasticSearch</p>
+</li>
+<li>
+<p><code>DynamoDB (Amazon NoSQL)</code>: Be your app's MongoDB. It's like MongoLab</p>
+</li>
+<li>
+<p><code>Elasticache (Amazon Memcached)</code>: Be your app's Memcached or Redis. It's like Redis to Go, Memcachier</p>
+</li>
+<li>
+<p><code>Elastic Transcoder (Amazon Beginning Cut Pro)</code>: Deal with video weirdness (change formats, compress, etc.) </p>
+</li>
+<li>
+<p><code>Lambda (Javascript Execution As A Service)</code>: Run little self contained snippets of JS to do discrete tasks. Sort of 
+a combination of a queue and execution in one. Currently mostly used for storing and then executing changes to your 
+AWS setup. Also, you can put it behind the API Gateway and expose it that way.</p>
+</li>
+<li>
+<p><code>SQS (Amazon Queue)</code>: Store data for future processing in a queue. The lingo for this is storing "messages" 
+but it doesn't have anything to do with email or SMS. SQS doesn't have any logic it's just a place to put things and 
+take things out. It's like RabbitMQ, Sidekiq.</p>
+</li>
+</ul>
+<h3>Mobile App Developer Services</h3>
+<ul>
+<li>
+<p><code>Cognito (Amazon OAuth As A Service)</code>: Give end users - (non AWS) - the ability to log in with Google, Facebook, etc. 
+It's like OAuth.io</p>
+</li>
+<li>
+<p><code>Device Farm (Amazon Drawer of old Android devices)</code>: Test your app on a bunch of different IOS and Android devices simultaneously. 
+It's like MobileTest, iOS emulator</p>
+</li>
+<li>
+<p><code>Mobile Analytics (Spot on Name, Amazon Product Managers take note)</code>: Track what people are doing inside of your app. It's like Flurry.</p>
+</li>
+<li>
+<p><code>SNS (Amazon Messenger)</code>: Send mobile notifications, emails and/or SMS messages. It's like UrbanAirship, Twilio</p>
+</li>
+</ul>
+<h3>Ops and Code Deployment Services</h3>
+<ul>
+<li>
+<p><code>CodeCommit (Amazon GitHub)</code>: Version control your code - hosted Git. It's like Github, BitBucket</p>
+</li>
+<li>
+<p><code>Code Deploy</code>: Get your code from your CodeCommit repo (or Github) onto a bunch of EC2 instances in a sane way. 
+It's like Heroku, Capistrano</p>
+</li>
+<li>
+<p><code>CodePipeline (Amazon Continuous Integration)</code>: Run automated test on your code and then do stuff with it depending on if 
+it passes those tests. It's like CircleCI, Travis.</p>
+</li>
+<li>
+<p><code>EC2 Container Service (Amazon Docker As a Service)</code>: Put a Dockerfile into an EC2 instance so you can run a website</p>
+</li>
+<li>
+<p><code>Elastic Beanstalk (Amazon Platform As A Service)</code>: Move your app hosted on Heroku to AWS when it gets too expensive. 
+It's like Heroku, BlueMix, Modulus</p>
+</li>
+</ul>
+<h3>Enterprise / Corporate Services</h3>
+<ul>
+<li>
+<p><code>AppStream (Amazon Citrix)</code>: Put a copy of a Windows application on a windows machine that people get remote access to. 
+It's like Citrix, RDP</p>
+</li>
+<li>
+<p><code>Direct Connect</code>: Pay your Telco + AWS to get a dedicated leased line from your data center or network to AWS. Cheaper than 
+Internet out for Data. It's like a toll road turnpike bypassing the crowded side streets</p>
+</li>
+<li>
+<p><code>Directory Service</code>: Tie together other apps that need a Microsoft Active Directory to control them</p>
+</li>
+<li>
+<p><code>WorkDocs (Amazon Unstructured Files)</code>: Share Word Docs with your colleagues. It's like Dropbox, DataAnywhere</p>
+</li>
+<li>
+<p><code>WorkMail (Amazon Company Email)</code>: Give everyone in your company the same email system and calendar. It's like
+Google Apps for Domains</p>
+</li>
+<li>
+<p><code>Workspaces (Amazon Remote Computer)</code>: Gives you a standard windows desktop that you're remotely controlling</p>
+</li>
+<li>
+<p><code>Service Catalog (Amazon Setup Already)</code>: Give other AWS users in your group access to preset apps you've built so they 
+don't have to read guides like this. </p>
+</li>
+<li>
+<p><code>Storage Gateway</code>: S3 pretending it's part of your corporate network. Stop buying more storage to keep word docs on. 
+Make automating getting files into S3 from your corporate network easier.</p>
+</li>
+</ul>
+<h3>BigData Services</h3>
+<ul>
+<li>
+<p><code>Data Pipeline (Amazon ETL)</code>: Extract, Transform and Load data from elsewhere in AWS. Schedule when it happens and 
+get alerts when they fail.</p>
+</li>
+<li>
+<p><code>Elastic Map Reduce (Amazon Hadooper)</code>: Iterate over massive text files of raw data that you're keeping in S3. It's like
+Treasure Data.</p>
+</li>
+<li>
+<p><code>Glacier (Really slow Amazon S3)</code>: Make backups of your backups that you keep on S3. Also, beware the costs of getting 
+data back out in a hurry. For long term archiving.</p>
+</li>
+<li>
+<p><code>Kinesis (Amazon High Throughput)</code>: Injest lots of data very quickly (For things like analytics or people retweeting Kanye) 
+that you then later use other AWS services to analyze. It's like Kafka</p>
+</li>
+<li>
+<p><code>RedShift (Amazon Data Warehouse)</code>: Store a whole bunch of analytics data, do some processing and dump it out</p>
+</li>
+<li>
+<p><code>Machine Learning (Skynet)</code>: Predict future behavior from existing data for problems like fraud detection or "people that 
+bought x also bought y"</p>
+</li>
+<li>
+<p><code>SWF (Amazon EC2 Queue)</code>: Build a service of "deciders" and "workers" on top of EC2 to accomplish a set task. Unlike 
+SQS - logic is setup inside the service to determine how and what should happen. It's like IronWorker</p>
+</li>
+</ul>
+<h3>AWS Management Services</h3>
+<ul>
+<li>
+<p><code>CloudFormation (Amazon Services Setup)</code>: Setup a bunch of connected AWS services in one go</p>
+</li>
+<li>
+<p><code>CloudTrail (Amazon Logging)</code>: Log who is doing what in your AWS stack (API calls)</p>
+</li>
+<li>
+<p><code>CloudWatch (Amazon Status Pager)</code>: Get alerts about AWS services messing up or disconnecting. It's like PagerDuty, Statuspage.</p>
+</li>
+<li>
+<p><code>Config (Amazon Configuration Management)</code>: Keep from going insane if you have a large AWS setup and changes are happening 
+that you want to track.</p>
+</li>
+<li>
+<p><code>OpsWorks (Amazon Chef)</code>: Handle running your application with things like auto-scaling</p>
+</li>
+<li>
+<p><code>Trusted Advisor (Amazon Pennypincher)</code>: Find out where you're paying too much in your AWS setup (unused EC2 instances, etc.)</p>
+</li>
+</ul>
+      </div>
+<!-- /.entry-content -->
+      <footer class="post-info text-muted">
+        <button type="button" class="btn btn-default">          
+          <a href="http://ownport.github.io/notes/category/articles.html"><div class="fa fa-lg fa-folder-open"></div> articles</a>
+        </button>
+        <button type="button" class="btn btn-default">
+          <a href="http://ownport.github.io/notes/tag/amazon.html"><div class="fa fa-lg fa-tag"></div> amazon</a>
+        </button>
+        <button type="button" class="btn btn-default">
+          <a href="http://ownport.github.io/notes/tag/services.html"><div class="fa fa-lg fa-tag"></div> services</a>
+        </button>
+        <button type="button" class="btn btn-default">
+          <a href="http://ownport.github.io/notes/tag/cloud.html"><div class="fa fa-lg fa-tag"></div> cloud</a>
+        </button>
+        <button type="button" class="btn btn-default">
+          <a href="http://ownport.github.io/notes/tag/servers.html"><div class="fa fa-lg fa-tag"></div> servers</a>
+        </button>
+        <button type="button" class="btn btn-default">
+          <a href="http://ownport.github.io/notes/tag/bigdata.html"><div class="fa fa-lg fa-tag"></div> bigdata</a>
+        </button>
+        <button type="button" class="btn btn-default">
+          <a href="http://ownport.github.io/notes/tag/management.html"><div class="fa fa-lg fa-tag"></div> management</a>
+        </button>
+      </footer>
+      <!-- /.post-info -->
+    </section>
+    </div>
+    <footer class="footer">
+      <div class="container">
+        <p class="footer-text">&copy; <a href="http://ownport.github.io/notes">ownport.github.io/notes</a> powered by <a href="http://getpelican.com/">pelican</a> and <a href="http://nodotcom.org">nikhil (customized)</a></p>
+      </div>
+    </footer>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+  </body>
+</html>
