@@ -1,5 +1,5 @@
 Title: BigData Data Visualization links
-Date: 2015-09-14 8:40
+Date: 2015-09-14 23:55
 Tags: hadoop, bigdata, visualization
 
 - [Arbor](https://github.com/samizdatco/arbor): graph visualization library using web workers and jQuery
@@ -49,6 +49,8 @@ Tags: hadoop, bigdata, visualization
 - [Recline](https://github.com/okfn/recline): simple but powerful library for building data applications in pure Javascript and HTML
 
 - [Redash](https://github.com/everythingme/redash): open-source platform to query and visualize data
+
+- [Seaborn](http://web.stanford.edu/~mwaskom/software/seaborn/index.html): statistical data visualization. Seaborn is a Python visualization library based on matplotlib. It provides a high-level interface for drawing attractive statistical graphics.
 
 - [Sigma.js](https://github.com/jacomyal/sigma.js): JavaScript library dedicated to graph drawing
 

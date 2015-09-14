@@ -1,5 +1,5 @@
 Title: Python Links
-Date: 2015-08-31 08:30
+Date: 2015-09-14 23:20
 Tags: links, python, parallel, test, web framework
 
 ### Parallel execution
@@ -40,5 +40,11 @@ Tags: links, python, parallel, test, web framework
 
 - [nose](https://nose.readthedocs.org/en/latest/) extends unittest to make testing easier.
 - [Mock](http://www.voidspace.org.uk/python/mock/) - Mocking and Testing Library
+
+
+### Documentation
+
+- [Python Module of the Week](http://bioportal.weizmann.ac.il/course/python/PyMOTW/PyMOTW/docs/contents.html)
+
 
 
