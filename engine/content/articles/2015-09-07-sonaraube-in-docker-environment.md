@@ -61,6 +61,11 @@ db:
    - POSTGRES_PASSWORD=sonar
 ```
 
+### SonarQube and Maven
+
+```sh
+$ mvn sonar:sonar -Dsonar.host.url=http://<sonarqube-host>:9000 -Dsonar.jdbc.url=jdbc:postgresql://<sonarqube-host>/sonar
+```
 
 ### Links
 
