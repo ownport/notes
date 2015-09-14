@@ -5,35 +5,56 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>http://ownport.github.io/notes/</loc>
-<lastmod>2015-09-13T06:40:40-00:00</lastmod>
+<lastmod>2015-09-14T05:52:05-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://ownport.github.io/notes/archives.html</loc>
-<lastmod>2015-09-13T06:40:40-00:00</lastmod>
+<lastmod>2015-09-14T05:52:05-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://ownport.github.io/notes/tags.html</loc>
-<lastmod>2015-09-13T06:40:40-00:00</lastmod>
+<lastmod>2015-09-14T05:52:05-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://ownport.github.io/notes/categories.html</loc>
-<lastmod>2015-09-13T06:40:40-00:00</lastmod>
+<lastmod>2015-09-14T05:52:05-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://ownport.github.io/notes/pages/search.html</loc>
-<lastmod>2015-09-13T06:40:40-00:00</lastmod>
+<lastmod>2015-09-14T05:52:05-00:00</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>http://ownport.github.io/notes/posts/2015/09/bigdata-business-intelligence-links.html</loc>
+<lastmod>2015-09-14T08:50:00+03:00</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>http://ownport.github.io/notes/posts/2015/09/bigdata-system-deployment-links.html</loc>
+<lastmod>2015-09-14T08:50:00+03:00</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>http://ownport.github.io/notes/posts/2015/09/bigdata-data-visualization-links.html</loc>
+<lastmod>2015-09-14T08:40:00+03:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
@@ -179,13 +200,6 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
-<loc>http://ownport.github.io/notes/posts/2015/07/bigdata-business-intelligence-links.html</loc>
-<lastmod>2015-07-28T22:00:00+03:00</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.5</priority>
-</url>
-
-<url>
 <loc>http://ownport.github.io/notes/posts/2015/07/bigdata-columnar-databases-links.html</loc>
 <lastmod>2015-07-28T22:00:00+03:00</lastmod>
 <changefreq>monthly</changefreq>
@@ -194,13 +208,6 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>http://ownport.github.io/notes/posts/2015/07/bigdata-data-ingestion-links.html</loc>
-<lastmod>2015-07-28T22:00:00+03:00</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.5</priority>
-</url>
-
-<url>
-<loc>http://ownport.github.io/notes/posts/2015/07/bigdata-data-visualization-links.html</loc>
 <lastmod>2015-07-28T22:00:00+03:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
@@ -354,13 +361,6 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
-<loc>http://ownport.github.io/notes/posts/2015/07/bigdata-system-deployment-links.html</loc>
-<lastmod>2015-07-28T22:00:00+03:00</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.5</priority>
-</url>
-
-<url>
 <loc>http://ownport.github.io/notes/posts/2015/07/bigdata-time-series-database-links.html</loc>
 <lastmod>2015-07-28T22:00:00+03:00</lastmod>
 <changefreq>monthly</changefreq>
@@ -481,7 +481,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>http://ownport.github.io/notes/category/bigdata.html</loc>
-<lastmod>2015-09-13T09:30:00+02:02</lastmod>
+<lastmod>2015-09-14T08:50:00+02:02</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -544,7 +544,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>http://ownport.github.io/notes/tag/visualization.html</loc>
-<lastmod>2015-08-18T20:30:00+02:02</lastmod>
+<lastmod>2015-09-14T08:40:00+02:02</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -683,6 +683,13 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
+<loc>http://ownport.github.io/notes/tag/intelligence.html</loc>
+<lastmod>2015-09-14T08:50:00+02:02</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
 <loc>http://ownport.github.io/notes/tag/testing.html</loc>
 <lastmod>2015-09-07T23:30:00+02:02</lastmod>
 <changefreq>daily</changefreq>
@@ -754,7 +761,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>http://ownport.github.io/notes/tag/bigdata.html</loc>
-<lastmod>2015-09-13T09:30:00+02:02</lastmod>
+<lastmod>2015-09-14T08:50:00+02:02</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -762,6 +769,13 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
 <loc>http://ownport.github.io/notes/tag/optimization.html</loc>
 <lastmod>2015-04-30T00:00:00+02:02</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>http://ownport.github.io/notes/tag/business.html</loc>
+<lastmod>2015-09-14T08:50:00+02:02</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -1076,7 +1090,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>http://ownport.github.io/notes/tag/hadoop.html</loc>
-<lastmod>2015-09-13T09:30:00+02:02</lastmod>
+<lastmod>2015-09-14T08:50:00+02:02</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -1202,7 +1216,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>http://ownport.github.io/notes/author/ownport.html</loc>
-<lastmod>2015-09-13T09:30:00+02:02</lastmod>
+<lastmod>2015-09-14T08:50:00+02:02</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
