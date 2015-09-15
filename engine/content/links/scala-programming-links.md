@@ -22,6 +22,7 @@ Tags: links, scala, documentation, libraries
 
 - [json4s/json4s](https://github.com/json4s/json4s)  A single AST to be used by other scala json libraries [http://json4s.org](http://json4s.org)
 - [Rovak/ScalaWebscraper](https://github.com/Rovak/ScalaWebscraper) Scala Webscraper
+- [ruippeixotog/scala-scraper](https://github.com/ruippeixotog/scala-scraper) A Scala library for scraping content from HTML pages 
 - [jboner/scala-dataflow](https://github.com/jboner/scala-dataflow) Oz-style dataflow (single-assignment) variables and streams for Scala [http://jonasboner.com](http://jonasboner.com)
 - [scopt/scopt](https://github.com/scopt/scopt) simple scala command line options parsing 
 - [lloydmeta/metascraper](https://github.com/lloydmeta/metascraper) Scala library for scraping metadata from specified URLs (e.g. OpenGraph) 
