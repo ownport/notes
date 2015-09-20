@@ -5,35 +5,56 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>http://ownport.github.io/notes/</loc>
-<lastmod>2015-09-14T21:36:58-00:00</lastmod>
+<lastmod>2015-09-20T07:30:08-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://ownport.github.io/notes/archives.html</loc>
-<lastmod>2015-09-14T21:36:58-00:00</lastmod>
+<lastmod>2015-09-20T07:30:08-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://ownport.github.io/notes/tags.html</loc>
-<lastmod>2015-09-14T21:36:58-00:00</lastmod>
+<lastmod>2015-09-20T07:30:08-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://ownport.github.io/notes/categories.html</loc>
-<lastmod>2015-09-14T21:36:58-00:00</lastmod>
+<lastmod>2015-09-20T07:30:08-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://ownport.github.io/notes/pages/search.html</loc>
-<lastmod>2015-09-14T21:36:58-00:00</lastmod>
+<lastmod>2015-09-20T07:30:08-00:00</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>http://ownport.github.io/notes/posts/2015/09/snappy-ubuntu-core.html</loc>
+<lastmod>2015-09-20T10:30:00+03:00</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>http://ownport.github.io/notes/posts/2015/09/rest-resources-url-notes.html</loc>
+<lastmod>2015-09-16T22:30:00+03:00</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>http://ownport.github.io/notes/posts/2015/09/rest-api-rules-notes.html</loc>
+<lastmod>2015-09-15T21:30:00+03:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
@@ -530,7 +551,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>http://ownport.github.io/notes/category/articles.html</loc>
-<lastmod>2015-09-14T23:30:00+02:02</lastmod>
+<lastmod>2015-09-20T10:30:00+02:02</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -571,15 +592,8 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
-<loc>http://ownport.github.io/notes/tag/totem.html</loc>
-<lastmod>2015-09-08T08:30:00+02:02</lastmod>
-<changefreq>daily</changefreq>
-<priority>0.5</priority>
-</url>
-
-<url>
-<loc>http://ownport.github.io/notes/tag/performance.html</loc>
-<lastmod>2015-06-22T00:00:00+02:02</lastmod>
+<loc>http://ownport.github.io/notes/tag/rest.html</loc>
+<lastmod>2015-09-16T22:30:00+02:02</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -627,8 +641,8 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
-<loc>http://ownport.github.io/notes/tag/bidata.html</loc>
-<lastmod>2015-09-14T23:35:00+02:02</lastmod>
+<loc>http://ownport.github.io/notes/tag/sonarqube.html</loc>
+<lastmod>2015-09-14T23:30:00+02:02</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -641,8 +655,22 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
+<loc>http://ownport.github.io/notes/tag/snappy.html</loc>
+<lastmod>2015-09-20T10:30:00+02:02</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
 <loc>http://ownport.github.io/notes/tag/infographics.html</loc>
 <lastmod>2015-03-21T00:00:00+02:02</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>http://ownport.github.io/notes/tag/resources.html</loc>
+<lastmod>2015-09-16T22:30:00+02:02</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -676,8 +704,8 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
-<loc>http://ownport.github.io/notes/tag/rest.html</loc>
-<lastmod>2015-04-30T00:00:00+02:02</lastmod>
+<loc>http://ownport.github.io/notes/tag/totem.html</loc>
+<lastmod>2015-09-08T08:30:00+02:02</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -851,8 +879,15 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
-<loc>http://ownport.github.io/notes/tag/r.html</loc>
-<lastmod>2015-09-14T23:45:00+02:02</lastmod>
+<loc>http://ownport.github.io/notes/tag/optimization.html</loc>
+<lastmod>2015-04-30T00:00:00+02:02</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>http://ownport.github.io/notes/tag/core.html</loc>
+<lastmod>2015-09-20T10:30:00+02:02</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -887,7 +922,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>http://ownport.github.io/notes/tag/ubuntu.html</loc>
-<lastmod>2015-09-12T22:30:00+02:02</lastmod>
+<lastmod>2015-09-20T10:30:00+02:02</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -942,8 +977,8 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
-<loc>http://ownport.github.io/notes/tag/sonarqube.html</loc>
-<lastmod>2015-09-14T23:30:00+02:02</lastmod>
+<loc>http://ownport.github.io/notes/tag/bidata.html</loc>
+<lastmod>2015-09-14T23:35:00+02:02</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -956,8 +991,8 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
-<loc>http://ownport.github.io/notes/tag/registry.html</loc>
-<lastmod>2015-04-30T00:00:00+02:02</lastmod>
+<loc>http://ownport.github.io/notes/tag/cleaning.html</loc>
+<lastmod>2015-08-18T20:30:00+02:02</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -979,6 +1014,13 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
 <loc>http://ownport.github.io/notes/tag/servers.html</loc>
 <lastmod>2015-09-12T11:30:00+02:02</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>http://ownport.github.io/notes/tag/api.html</loc>
+<lastmod>2015-09-16T22:30:00+02:02</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -1110,8 +1152,8 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
-<loc>http://ownport.github.io/notes/tag/optimization.html</loc>
-<lastmod>2015-04-30T00:00:00+02:02</lastmod>
+<loc>http://ownport.github.io/notes/tag/r.html</loc>
+<lastmod>2015-09-14T23:45:00+02:02</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -1119,6 +1161,13 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
 <loc>http://ownport.github.io/notes/tag/dashboard.html</loc>
 <lastmod>2015-03-25T00:00:00+02:02</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>http://ownport.github.io/notes/tag/install.html</loc>
+<lastmod>2015-09-20T10:30:00+02:02</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -1195,7 +1244,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>http://ownport.github.io/notes/tag/vagrant.html</loc>
-<lastmod>2015-06-19T00:00:00+02:02</lastmod>
+<lastmod>2015-09-20T10:30:00+02:02</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -1236,8 +1285,8 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
-<loc>http://ownport.github.io/notes/tag/jenkins.html</loc>
-<lastmod>2015-03-30T00:00:00+02:02</lastmod>
+<loc>http://ownport.github.io/notes/tag/performance.html</loc>
+<lastmod>2015-06-22T00:00:00+02:02</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -1264,8 +1313,8 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
-<loc>http://ownport.github.io/notes/tag/cleaning.html</loc>
-<lastmod>2015-08-18T20:30:00+02:02</lastmod>
+<loc>http://ownport.github.io/notes/tag/registry.html</loc>
+<lastmod>2015-04-30T00:00:00+02:02</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -1320,6 +1369,13 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
+<loc>http://ownport.github.io/notes/tag/jenkins.html</loc>
+<lastmod>2015-03-30T00:00:00+02:02</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
 <loc>http://ownport.github.io/notes/tag/docker.html</loc>
 <lastmod>2015-09-14T23:30:00+02:02</lastmod>
 <changefreq>daily</changefreq>
@@ -1335,7 +1391,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>http://ownport.github.io/notes/author/ownport.html</loc>
-<lastmod>2015-09-15T00:00:00+02:02</lastmod>
+<lastmod>2015-09-20T10:30:00+02:02</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
