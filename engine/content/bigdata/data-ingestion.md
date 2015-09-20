@@ -1,6 +1,6 @@
 Title: BigData Data Ingestion links
-Date: 2015-07-28 22:00
-Tags: hadoop, bigdata
+Date: 2015-09-20 13:10
+Tags: hadoop, bigdata, ingestion
 
 - [Amazon Kinesis](http://aws.amazon.com/kinesis/): real-time processing of streaming data at massive scale
 
