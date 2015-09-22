@@ -4,7 +4,7 @@
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
   <head>
-    <title>ownport.github.io/notes - intelligence</title>
+    <title>How To Use UUID To Mount Partitions - ownport.github.io/notes</title>
     <meta name="google-site-verification" content="LmB1dDy5ueSqYPVOs6z4ylRQgNDxelgPYHsRLLtCG7c" />
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -47,39 +47,69 @@
         <div class="collapse navbar-collapse navbar-right">
           <ul class="nav navbar-nav">
             <li><a href="http://ownport.github.io/notes/pages/search.html">Search</a></li>
-            <li class="active"active><a href="http://ownport.github.io/notes/tags.html">tags</a></li>
+            <li><a href="http://ownport.github.io/notes/tags.html">tags</a></li>
           </ul>
         </div>
         <!-- /.navbar-collapse -->
       </div>
     </nav>
     <div class="container">
-    <section id="content" class="content">
-      <ol class="breadcrumb">
-        <li><a href="http://ownport.github.io/notes"><div class="fa fa-lg fa-home"></div><span class="hidden-xs"> Home</span></a></li>
-        <li><a href="http://ownport.github.io/notes/tags.html"><div class="fa fa-lg fa-tags"></div> Tags <span class="badge">127</span></a></li>
-        <li class="active"><div class="fa fa-lg fa-tag"></div> intelligence <span class="badge">1</span></li>
-      </ol>
-      <div class="row">
-        <div class="col-sm-3">
-          <span class="text-muted">Mon 14 September 2015</span>
-        </div>
-        <div class="col-sm-9">
-          <p>
-            <a href="http://ownport.github.io/notes/posts/2015/09/bigdata-business-intelligence-links.html" rel="bookmark" title="Permalink to BigData Business Intelligence links">BigData Business Intelligence links</a>
-            <br/>
-            ActivePivot: Java In-Memory OLAP cube stored in columns, with clearly decoupled pre/post processing Adatao: business intelligence and data science platform Apama analytics: platform for streaming analytics and intelligent automated action Atigeo xPatterns: data analytics platform BIME Analytics: business intelligence platform in the cloud Chartio: lean business intelligence platform to ...
-          </p>
-        </div>
+    <section id="content" class="article content">
+      <header>
+        <h2 class="entry-title">
+          How To Use UUID To Mount Partitions
+        </h2>
+        
+        <div class="text-muted">Tue 22 September 2015</div>
+      </header>
+<!-- .entry-content -->
+      <div class="entry-content">
+        <p><a href="http://en.wikipedia.org/wiki/UUID">A Universally Unique Identifier (UUID)</a> is an identifier standard used in software construction, standardized by the Open Software Foundation (OSF) as part of the Distributed Computing Environment (DCE). The intent of UUIDs is to enable distributed systems to uniquely identify information without significant central coordination. Thus, anyone can create a UUID and use it to identify something with reasonable confidence that the identifier will never be unintentionally used by anyone for anything else. Information labeled with UUIDs can therefore be later combined into a single database without needing to resolve name conflicts.</p>
+<p>Linux's ext2/ext3 filesystem uses UUID to identify partitions.</p>
+<h4>List all UUIDs</h4>
+<p>Use blkid command-line utility to locate/print block device attributes:</p>
+<div class="highlight"><pre><span class="nv">$ </span>sudo blkid
+</pre></div>
+
+
+<p>Alternatively you can list them from their listing in your root filesystem:</p>
+<div class="highlight"><pre>ls -l /dev/disk/by-uuid/
+</pre></div>
+
+
+<h4>/etc/fstab file format</h4>
+<p>Simply use following syntax as example:</p>
+<div class="highlight"><pre>UUID={YOUR-UID}    {/path/to/mount/point}               {file-system-type}    defaults,errors=remount-ro 0       1
+</pre></div>
+
+
+<p>or it will be better to check <code>man fstab</code> for your operation system</p>
+<h4>Mount new partition</h4>
+<div class="highlight"><pre><span class="nv">$ </span>sudo mount -a
+</pre></div>
+
+
+<h2>Links</h2>
+<ul>
+<li><a href="http://www.cyberciti.biz/faq/linux-finding-using-uuids-to-update-fstab/">How To Use UUID To Mount Partitions</a></li>
+<li><a href="https://help.ubuntu.com/community/UsingUUID">Ubuntu Community wiki/UsingUUID</a></li>
+<li><a href="https://help.ubuntu.com/community/AutomaticallyMountPartitions">Ubuntu Community wiki/AutomaticallyMountPartitions</a></li>
+</ul>
       </div>
-      <div>
-        <ul class="pager">
-          <!--- <li class="previous disabled"><a>&larr; Previous</a></li> -->
-          <!--- <li class="next disabled"><a>Next &rarr;</a></li> -->
-        </ul>
-      </div>
+<!-- /.entry-content -->
+      <footer class="post-info text-muted">
+        <button type="button" class="btn btn-default">          
+          <a href="http://ownport.github.io/notes/category/articles.html"><div class="fa fa-lg fa-folder-open"></div> articles</a>
+        </button>
+        <button type="button" class="btn btn-default">
+          <a href="http://ownport.github.io/notes/tag/uuid.html"><div class="fa fa-lg fa-tag"></div> uuid</a>
+        </button>
+        <button type="button" class="btn btn-default">
+          <a href="http://ownport.github.io/notes/tag/fstab.html"><div class="fa fa-lg fa-tag"></div> fstab</a>
+        </button>
+      </footer>
+      <!-- /.post-info -->
     </section>
-    <!-- content -->
     </div>
     <footer class="footer">
       <div class="container">
