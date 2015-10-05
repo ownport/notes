@@ -6,6 +6,7 @@ Tags: uuid, fstab
 
 Linux's ext2/ext3 filesystem uses UUID to identify partitions.
 
+
 #### List all UUIDs
 
 Use blkid command-line utility to locate/print block device attributes:
@@ -17,6 +18,7 @@ Alternatively you can list them from their listing in your root filesystem:
 ```sh
 ls -l /dev/disk/by-uuid/
 ```
+
 
 #### /etc/fstab file format
 
@@ -33,6 +35,19 @@ or it will be better to check `man fstab` for your operation system
 ```sh
 $ sudo mount -a
 ```
+
+
+#### How to remove GPT from HDD?
+
+```sh
+$ sudo parted /dev/sdX
+(parted) mklabel msdos
+Warning: The existing disk label on /dev/sdX will be destroyed and all data on this disk will be lost. Do you want to continue?
+Yes/No? Yes  
+(parted) quit
+$
+``` 
+
 
 ## Links
 
