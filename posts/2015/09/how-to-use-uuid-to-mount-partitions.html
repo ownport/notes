@@ -89,6 +89,16 @@
 </pre></div>
 
 
+<h4>How to remove GPT from HDD?</h4>
+<div class="highlight"><pre><span class="nv">$ </span>sudo parted /dev/sdX
+<span class="o">(</span>parted<span class="o">)</span> mklabel msdos
+Warning: The existing disk label on /dev/sdX will be destroyed and all data on this disk will be lost. Do you want to <span class="k">continue</span>?
+Yes/No? Yes  
+<span class="o">(</span>parted<span class="o">)</span> quit
+<span class="err">$</span>
+</pre></div>
+
+
 <h2>Links</h2>
 <ul>
 <li><a href="http://www.cyberciti.biz/faq/linux-finding-using-uuids-to-update-fstab/">How To Use UUID To Mount Partitions</a></li>

@@ -5,35 +5,49 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>http://ownport.github.io/notes/</loc>
-<lastmod>2015-09-22T05:21:16-00:00</lastmod>
+<lastmod>2015-10-05T07:41:28-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://ownport.github.io/notes/archives.html</loc>
-<lastmod>2015-09-22T05:21:16-00:00</lastmod>
+<lastmod>2015-10-05T07:41:28-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://ownport.github.io/notes/tags.html</loc>
-<lastmod>2015-09-22T05:21:16-00:00</lastmod>
+<lastmod>2015-10-05T07:41:28-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://ownport.github.io/notes/categories.html</loc>
-<lastmod>2015-09-22T05:21:16-00:00</lastmod>
+<lastmod>2015-10-05T07:41:28-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://ownport.github.io/notes/pages/search.html</loc>
-<lastmod>2015-09-22T05:21:16-00:00</lastmod>
+<lastmod>2015-10-05T07:41:28-00:00</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>http://ownport.github.io/notes/posts/2015/10/go-learning-path.html</loc>
+<lastmod>2015-10-05T08:10:00+03:00</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>http://ownport.github.io/notes/posts/2015/10/free-coding-cources.html</loc>
+<lastmod>2015-10-05T08:00:00+03:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
@@ -579,7 +593,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>http://ownport.github.io/notes/category/articles.html</loc>
-<lastmod>2015-09-22T08:10:00+02:02</lastmod>
+<lastmod>2015-10-05T08:10:00+02:02</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -635,7 +649,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>http://ownport.github.io/notes/tag/go.html</loc>
-<lastmod>2015-09-14T23:35:00+02:02</lastmod>
+<lastmod>2015-10-05T08:10:00+02:02</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -781,6 +795,13 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
+<loc>http://ownport.github.io/notes/tag/articles.html</loc>
+<lastmod>2015-10-05T08:10:00+02:02</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
 <loc>http://ownport.github.io/notes/tag/continuous-integration.html</loc>
 <lastmod>2015-07-17T00:00:00+02:02</lastmod>
 <changefreq>daily</changefreq>
@@ -797,6 +818,13 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
 <loc>http://ownport.github.io/notes/tag/hive.html</loc>
 <lastmod>2015-09-14T23:35:00+02:02</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>http://ownport.github.io/notes/tag/courses.html</loc>
+<lastmod>2015-10-05T08:00:00+02:02</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -880,7 +908,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>http://ownport.github.io/notes/tag/books.html</loc>
-<lastmod>2015-09-10T08:23:00+02:02</lastmod>
+<lastmod>2015-10-05T08:10:00+02:02</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -984,6 +1012,13 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
+<loc>http://ownport.github.io/notes/tag/free.html</loc>
+<lastmod>2015-10-05T08:00:00+02:02</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
 <loc>http://ownport.github.io/notes/tag/juju.html</loc>
 <lastmod>2015-03-30T00:00:00+02:02</lastmod>
 <changefreq>daily</changefreq>
@@ -1048,7 +1083,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>http://ownport.github.io/notes/tag/programming.html</loc>
-<lastmod>2015-03-19T00:00:00+02:02</lastmod>
+<lastmod>2015-10-05T08:10:00+02:02</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -1096,6 +1131,13 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
+<loc>http://ownport.github.io/notes/tag/coding.html</loc>
+<lastmod>2015-10-05T08:00:00+02:02</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
 <loc>http://ownport.github.io/notes/tag/servers.html</loc>
 <lastmod>2015-09-12T11:30:00+02:02</lastmod>
 <changefreq>daily</changefreq>
@@ -1126,6 +1168,13 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
 <loc>http://ownport.github.io/notes/tag/cloud.html</loc>
 <lastmod>2015-09-12T11:30:00+02:02</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>http://ownport.github.io/notes/tag/languages.html</loc>
+<lastmod>2015-10-05T08:10:00+02:02</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -1286,7 +1335,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>http://ownport.github.io/notes/tag/links.html</loc>
-<lastmod>2015-09-14T23:45:00+02:02</lastmod>
+<lastmod>2015-10-05T08:10:00+02:02</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -1503,7 +1552,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>http://ownport.github.io/notes/author/ownport.html</loc>
-<lastmod>2015-09-22T08:10:00+02:02</lastmod>
+<lastmod>2015-10-05T08:10:00+02:02</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
