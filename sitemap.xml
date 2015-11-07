@@ -5,35 +5,49 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>http://ownport.github.io/notes/</loc>
-<lastmod>2015-10-05T07:41:28-00:00</lastmod>
+<lastmod>2015-11-07T08:16:42-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://ownport.github.io/notes/archives.html</loc>
-<lastmod>2015-10-05T07:41:28-00:00</lastmod>
+<lastmod>2015-11-07T08:16:42-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://ownport.github.io/notes/tags.html</loc>
-<lastmod>2015-10-05T07:41:28-00:00</lastmod>
+<lastmod>2015-11-07T08:16:42-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://ownport.github.io/notes/categories.html</loc>
-<lastmod>2015-10-05T07:41:28-00:00</lastmod>
+<lastmod>2015-11-07T08:16:42-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://ownport.github.io/notes/pages/search.html</loc>
-<lastmod>2015-10-05T07:41:28-00:00</lastmod>
+<lastmod>2015-11-07T08:16:42-00:00</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>http://ownport.github.io/notes/posts/2015/11/java-libs.html</loc>
+<lastmod>2015-11-07T08:40:00+02:00</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>http://ownport.github.io/notes/posts/2015/11/twelve-principles-of-agile-software.html</loc>
+<lastmod>2015-11-07T08:10:00+02:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
@@ -593,7 +607,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>http://ownport.github.io/notes/category/articles.html</loc>
-<lastmod>2015-10-05T08:10:00+02:02</lastmod>
+<lastmod>2015-11-07T08:10:00+02:02</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -614,7 +628,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>http://ownport.github.io/notes/category/links.html</loc>
-<lastmod>2015-09-14T23:45:00+02:02</lastmod>
+<lastmod>2015-11-07T08:40:00+02:02</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -697,8 +711,8 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
-<loc>http://ownport.github.io/notes/tag/bidata.html</loc>
-<lastmod>2015-09-14T23:35:00+02:02</lastmod>
+<loc>http://ownport.github.io/notes/tag/agile.html</loc>
+<lastmod>2015-11-07T08:10:00+02:02</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -781,6 +795,13 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
+<loc>http://ownport.github.io/notes/tag/libs.html</loc>
+<lastmod>2015-11-07T08:40:00+02:02</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
 <loc>http://ownport.github.io/notes/tag/falcon.html</loc>
 <lastmod>2015-03-24T00:00:00+02:02</lastmod>
 <changefreq>daily</changefreq>
@@ -837,8 +858,8 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
-<loc>http://ownport.github.io/notes/tag/architecture.html</loc>
-<lastmod>2015-07-29T09:00:00+02:02</lastmod>
+<loc>http://ownport.github.io/notes/tag/bidata.html</loc>
+<lastmod>2015-09-14T23:35:00+02:02</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -984,6 +1005,13 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
+<loc>http://ownport.github.io/notes/tag/architecture.html</loc>
+<lastmod>2015-07-29T09:00:00+02:02</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
 <loc>http://ownport.github.io/notes/tag/core.html</loc>
 <lastmod>2015-09-20T10:30:00+02:02</lastmod>
 <changefreq>daily</changefreq>
@@ -1068,8 +1096,8 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
-<loc>http://ownport.github.io/notes/tag/search.html</loc>
-<lastmod>2015-09-20T17:20:00+02:02</lastmod>
+<loc>http://ownport.github.io/notes/tag/training.html</loc>
+<lastmod>2015-09-14T22:40:00+02:02</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -1195,7 +1223,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>http://ownport.github.io/notes/tag/java.html</loc>
-<lastmod>2015-09-14T22:40:00+02:02</lastmod>
+<lastmod>2015-11-07T08:40:00+02:02</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -1271,6 +1299,13 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
+<loc>http://ownport.github.io/notes/tag/search.html</loc>
+<lastmod>2015-09-20T17:20:00+02:02</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
 <loc>http://ownport.github.io/notes/tag/zeppelin.html</loc>
 <lastmod>2015-07-29T09:00:00+02:02</lastmod>
 <changefreq>daily</changefreq>
@@ -1335,7 +1370,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>http://ownport.github.io/notes/tag/links.html</loc>
-<lastmod>2015-10-05T08:10:00+02:02</lastmod>
+<lastmod>2015-11-07T08:40:00+02:02</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -1420,6 +1455,13 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
 <loc>http://ownport.github.io/notes/tag/authentication.html</loc>
 <lastmod>2015-09-14T09:00:00+02:02</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>http://ownport.github.io/notes/tag/build.html</loc>
+<lastmod>2015-09-14T22:40:00+02:02</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -1537,6 +1579,13 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
+<loc>http://ownport.github.io/notes/tag/principle.html</loc>
+<lastmod>2015-11-07T08:10:00+02:02</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
 <loc>http://ownport.github.io/notes/tag/docker.html</loc>
 <lastmod>2015-09-14T23:30:00+02:02</lastmod>
 <changefreq>daily</changefreq>
@@ -1552,7 +1601,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>http://ownport.github.io/notes/author/ownport.html</loc>
-<lastmod>2015-10-05T08:10:00+02:02</lastmod>
+<lastmod>2015-11-07T08:40:00+02:02</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
