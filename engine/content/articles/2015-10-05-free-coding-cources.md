@@ -64,6 +64,10 @@ Here you’ll learn HTML5, CSS3, JavaScript, Databases, DevTools, Node.js, Angul
 This Google project launched in 2010 to counter Apple’s HTML5. The site is full of tutorials, resources and the latest HTML5 updates. It’s open source, so developers can play around with HTML5 code. Because this is more advanced than most introductory courses, you may want to gain some knowledge and experience before jumping in.
 
 
+### [linda.com](http://www.lynda.com/) Online video tutorials & trainings 
+
+lynda.com is a leading online learning company that helps anyone learn business, software, technology and creative skills to achieve personal and professional goals. Through individual, corporate, academic and government subscriptions, members have access to the lynda.com video library of engaging, top-quality courses taught by recognized industry experts. The company also provides German, French and Spanish language content under the video2brain brand name.
+
 
 ### Links 
 
