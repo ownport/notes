@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+  <head>
+    <title>AVRO-1124: RESTful service for holding schemas (re-post) - ownport.github.io/notes</title>
+    <meta name="google-site-verification" content="LmB1dDy5ueSqYPVOs6z4ylRQgNDxelgPYHsRLLtCG7c" />
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet" />
+    <!--<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css" rel="stylesheet" />-->
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="http://ownport.github.io/notes/theme/style.css" rel="stylesheet" />
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-65731833-1', 'auto');
+      ga('send', 'pageview');
+
+    </script>
+  </head>
+  <body id="index" class="archive">
+    <!--[if lt IE 7]>
+        <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+    <nav class="navbar navbar-default" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="http://ownport.github.io/notes">ownport.github.io/notes</a>
+        </div>
+        <div class="collapse navbar-collapse navbar-right">
+          <ul class="nav navbar-nav">
+            <li><a href="http://ownport.github.io/notes/pages/search.html">Search</a></li>
+            <li><a href="http://ownport.github.io/notes/tags.html">tags</a></li>
+          </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+      </div>
+    </nav>
+    <div class="container">
+    <section id="content" class="article content">
+      <header>
+        <h2 class="entry-title">
+          AVRO-1124: RESTful service for holding schemas (re-post)
+        </h2>
+        
+        <div class="text-muted">Mon 16 November 2015</div>
+      </header>
+<!-- .entry-content -->
+      <div class="entry-content">
+        <p>Original post: <a href="https://issues.apache.org/jira/browse/AVRO-1124">AVRO-1124</a> RESTful service for holding schemas</p>
+<h3>Motivation</h3>
+<p>It is nice to be able to pass around data in serialized form but still know the exact schema that was used to serialize it. The overhead of storing the schema with each record is too high unless the individual records are very large. There are workarounds for some common cases: in the case of files a schema can be stored once with a file of many records amortizing the per-record cost, and in the case of RPC the schema can be negotiated ahead of time and used for many requests. For other uses, though it is nice to be able to pass a reference to a given schema using a small id and allow this to be looked up. Since only a small number of schemas are likely to be active for a given data source, these can easily be cached, so the number of remote lookups is very small (one per active schema version).</p>
+<h3>Details</h3>
+<p>Basically this would consist of two things:</p>
+<ul>
+<li>A simple REST service that stores and retrieves schemas</li>
+<li>Some helper java code for fetching and caching schemas for people using the registry</li>
+</ul>
+<p>We have used something like this at LinkedIn for a few years now, and it would be nice to standardize this facility to be able to build up common tooling around it. This proposal will be based on what we have, but we can change it as ideas come up.</p>
+<p>The facilities this provides are super simple, basically you can register a schema which gives back a unique id for it or you can query for a schema. There is almost no code, and nothing very complex. The contract is that before emitting/storing a record you must first publish its schema to the registry or know that it has already been published (by checking your cache of published schemas). When reading you check your cache and if you don't find the id/schema pair there you query the registry to look it up. I will explain some of the nuances in more detail below.</p>
+<p>An added benefit of such a repository is that it makes a few other things possible:</p>
+<ul>
+<li>A graphical browser of the various data types that are currently used and all their previous forms.</li>
+<li>Automatic enforcement of compatibility rules. Data is always compatible in the sense that the reader will always deserialize it (since they are using the same schema as the writer) but this does not mean it is compatible with the expectations of the reader. For example if an int field is changed to a string that will almost certainly break anyone relying on that field. This definition of compatibility can differ for different use cases and should likely be pluggable.</li>
+</ul>
+<p>Here is a description of one of our uses of this facility at LinkedIn. We use this to retain a schema with "log" data end-to-end from the producing app to various real-time consumers as well as a set of resulting AvroFile in Hadoop. This schema metadata can then be used to auto-create hive tables (or add new fields to existing tables), or inferring pig fields, all without manual intervention. One important definition of compatibility that is nice to enforce is compatibility with historical data for a given "table". Log data is usually loaded in an append-only manner, so if someone changes an int field in a particular data set to be a string, tools like pig or hive that expect static columns will be unusable. Even using plain-vanilla map/reduce processing data where columns and types change willy nilly is painful. However the person emitting this kind of data may not know all the details of compatible schema evolution. We use the schema repository to validate that any change made to a schema don't violate the compatibility model, and reject the update if it does. We do this check both at run time, and also as part of the ant task that generates specific record code (as an early warning).</p>
+<p>Some details to consider:</p>
+<h3>Deployment</h3>
+<p>This can just be programmed against the servlet API and deploy as a standard war. You have lots of instances and load balance traffic over them.</p>
+<h3>Persistence</h3>
+<p>The storage needs are not very heavy. The clients are expected to cache the id =&gt; schema mapping, and the server can cache as well. Even after several years of heavy use we have &lt;50k schemas, each of which is pretty small. I think this part can be made pluggable and we can provide a jdbc- and file-based implementation as these don't require outlandish dependencies. People can easily plug in their favorite key-value store thingy if they like by implementing the right plugin interface. Actual reads will virtually always be cached in memory so this is not too important.</p>
+<h3>Group</h3>
+<p>In order to get the "latest" schema or handle compatibility enforcement on changes there has to be some way to group a set of schemas together and reason about the ordering of changes over these. I am going to call the grouping the "group". In our usage it is always the table or topic to which the schema is associated. For most of our usage the group name also happens to be the Record name as all of our schemas are records and our default is to have these match. There are use cases, though, where a single schema is used for multiple topics, each which is modeled independently. The proposal is not to enforce a particular convention but just to expose the group designator in the API. It would be possible to make the concept of group optional, but I can't come up with an example where that would be useful.</p>
+<h3>Compatibility</h3>
+<p>There are really different requirements for different use cases on what is considered an allowable change. Likewise it is useful to be able to extend this to have other kinds of checks (for example, in retrospect, I really wish we had required doc fields to be present so we could require documentation of fields as well as naming conventions). There can be some kind of general pluggable interface for this like SchemaChangeValidator.isValidChange(currentLatest, proposedNew)</p>
+<p>A reasonable implementation can be provided that does checks based on the rules in <a href="http://avro.apache.org/docs/current/spec.html#Schema+Resolution">http://avro.apache.org/docs/current/spec.html#Schema+Resolution</a>. Be default no checks need to be done. Ideally you should be able to have more than one policy (say one treatment for database schemas, one for logging event schemas, and one which does no checks at all). I can't imagine a need for more than a handful of these which would be statically configured (db_policy=com.mycompany.DBSchemaChangePolicy, noop=org.apache.avro.NoOpPolicy,...). Each group can configure the policy it wants to be used going forward with the default being none.</p>
+<h3>Security and Authentication</h3>
+<p>There isn't any of this. The assumption is that this service is not publicly available and those accessing it are honest (though perhaps accident prone). These are just schemas, after all.</p>
+<h3>Ids</h3>
+<p>There are a couple of questions about ids how we make ids to represent the schemas:</p>
+<ul>
+<li>Are they sequential (1,2,3..) or hash based? If hash based, what is sufficient collision probability?</li>
+<li>Are they global or per-group? That is, if I know the id do I also need to know the group to look up the schema?</li>
+<li>What kind of change triggers a new id? E.g. if I update a doc field does that give a new id? If not then that doc field will not be stored.</li>
+</ul>
+<p>For the id generation there are various options:</p>
+<ul>
+<li>A sequential integer</li>
+<li><a href="https://issues.apache.org/jira/browse/AVRO-1006">AVRO-1006</a> creates a schema-specific 64-bit hash.</li>
+<li>Our current implementation at LinkedIn uses the MD5 of the schema as the id.</li>
+</ul>
+<p>Our current implementation at LinkedIn uses the MD5 of the schema text after removing whitespace. The additional attributes like doc fields (and a few we made up) are actually important to us and we want them maintained (we add metadata fields of our own). This does mean we have some updates that generate a new schema id but don't cause a very meaningful semantic change to the schema (say because someone tweaked their doc string), but this doesn't hurt anything and it is nice to have the exact schema text represented. An example of uses these metadata fields is using the schema doc fields as the hive column doc fields.</p>
+<p>The id is actually just a unique identifier, and the id generation algorithm can be made pluggable if there is a real trade-off. In retrospect I don't think using the md5 is good because it is 16 bytes, which for a small message is bulkier than needed. Since the id is retained with each message, size is a concern.</p>
+<p>The AVRO-1006 fingerprint is super cool, but I have a couple concerns (possibly just due to misunderstanding):</p>
+<ul>
+<li>Seems to produce a 64-bit id. For a large number of schemas, 64 bits makes collisions unlikely but not unthinkable. Whether or not this matters depends on whether schemas are versioned per group or globally. If they are per group it may be okay, since most groups should only have a few hundred schema versions at most. If they are global I think it will be a problem. Probabilities for collision are given here under the assumption of perfect uniformity of the hash (it may be worse, but can't be better) <a href="http://en.wikipedia.org/wiki/Birthday_attack">http://en.wikipedia.org/wiki/Birthday_attack</a>. If we did have a collision we would be dead in the water, since our data would be unreadable. If this becomes a standard mechanism for storing schemas people will run into this problem.</li>
+<li>Even 64-bits is a bit bulky. Since this id needs to be stored with every row size is a concern, though a minor one.</li>
+<li>The notion of equivalence seems to throw away many things in the schema (doc, attributes, etc). This is unfortunate. One nice thing about avro is you can add your own made-up attributes to the schema since it is just JSON. This acts as a kind of poor-mans metadata repository. It would be nice to have these maintained rather than discarded.</li>
+</ul>
+<p>It is possible that I am misunderstanding the fingerprint scheme, though, so please correct me.</p>
+<p>My personal preference would be to use a sequential id per group. The main reason I like this is because the id doubles as the version number, i.e. my_schema/4 is the 4th version of the my_schema record/group. Persisted data then only needs to store the varint encoding of the version number, which is generally going to be 1 byte for a few hundred schema updates. The string my_schema/4 acts as a global id for this. This does allow per-group sharding for id generation, but sharding seems unlikely to be needed here. A 50GB database would store 52 million schemas. 52 million schemas "should be enough for anyone".</p>
+<p>Probably the easiest thing would be to just make the id generation scheme pluggable. That would kind of satisfy everyone, and, as a side-benefit give us at linkedin a gradual migration path off our md5-based ids. In this case ids would basically be opaque url-safe strings from the point of view of the repository and users could munge this id and encode it as they like.</p>
+<h3>APIs</h3>
+<p>Here are the proposed APIs. This tacitly assumes ids are per-group, but the change if pretty minor if not:</p>
+<p><code>GET /schemas/{group}/{id}</code></p>
+<ul>
+<li>Get a schema by id</li>
+<li>If the schema exists the response code will be 200 and the response body will be the schema text.</li>
+<li>If it doesn't exist the response will be 404.</li>
+</ul>
+<p><code>GET /schemas</code></p>
+<ul>
+<li>Produces a list of group names, one per line.</li>
+</ul>
+<p><code>GET /schemas/group</code></p>
+<ul>
+<li>Produces a list of versions for the given group, one per line.</li>
+</ul>
+<p><code>GET /schemas/group/latest</code></p>
+<ul>
+<li>If the group exists the response code will be 200 and the response body will be the schema text of the last registered schema.</li>
+<li>If the group doesn't exist the response code will be 404.</li>
+</ul>
+<p><code>POST /schemas/groups/{group_name}</code></p>
+<ul>
+<li>Register a schema</li>
+</ul>
+<p>Parameters:</p>
+<ul>
+<li>schema={text of schema}</li>
+<li>compatibility_model=XYZ</li>
+<li>force_override=(true|false)</li>
+</ul>
+<p>There are a few cases:</p>
+<ul>
+<li>If the group exists and the change is incompatible with the current latest, the server response code will be 403 (forbidden) UNLESS the force_override flag is set in which case not check will be made.</li>
+<li>If the server doesn't have an implementation corresponding to the given compatibility model key it will give a response code 400</li>
+<li>If the group does not exist it will be created with the given schema (and compatibility model)</li>
+<li>If the group exists and this schema has already been registered the server returns response code 200 and the id already assigned to that schema</li>
+<li>If the group exists, but this schema hasn't been registered, and the compatibility checks pass, then the response code will be 200 and it will store the schema and return the id of the schema</li>
+</ul>
+<p>The force_override flag allows registering an incompatible schema. We have found that sometimes you know "for sure" that your change is okay and just want to damn the torpedoes and charge ahead. This would be intended for manual rather than programmatic usage.</p>
+<h3>Intended Usage</h3>
+<p>Let's assume we are implementing a put and get API as a database would have using this registry, there is no substantial difference for a messaging style api. Here are the details of how this works:</p>
+<p><code>void put(table, key, record)</code></p>
+<p>Put is expected to do the following under the covers:</p>
+<ul>
+<li>Check the record's schema against a local cache of schema=&gt;id to get the schema id</li>
+<li>If it is not found then register it with the schema registry and get back a schema id and add this pair to the cache</li>
+<li>Store the serialized record bytes and schema id</li>
+</ul>
+<p><code>Record get(table, key)</code></p>
+<p>Get is expected to do the following:</p>
+<ul>
+<li>Retrieve the serialized record bytes and schema id from the store</li>
+<li>Check a local cache to see if this schema is known for this schema id</li>
+<li>If not, fetch the schema by id from the schema registry</li>
+<li>Deserialize the record using the schema and return it</li>
+</ul>
+<h3>Links</h3>
+<ul>
+<li><a href="https://github.com/schema-repo/schema-repo">schema-repo/schema-repo</a>  The Schema Repo is a RESTful web service for storing and serving mappings between schema identifiers and schema definitions. <a href="http://schemarepo.org">http://schemarepo.org</a></li>
+</ul>
+      </div>
+<!-- /.entry-content -->
+      <footer class="post-info text-muted">
+        <button type="button" class="btn btn-default">          
+          <a href="http://ownport.github.io/notes/category/articles.html"><div class="fa fa-lg fa-folder-open"></div> articles</a>
+        </button>
+        <button type="button" class="btn btn-default">
+          <a href="http://ownport.github.io/notes/tag/avro.html"><div class="fa fa-lg fa-tag"></div> avro</a>
+        </button>
+        <button type="button" class="btn btn-default">
+          <a href="http://ownport.github.io/notes/tag/schema.html"><div class="fa fa-lg fa-tag"></div> schema</a>
+        </button>
+        <button type="button" class="btn btn-default">
+          <a href="http://ownport.github.io/notes/tag/repository.html"><div class="fa fa-lg fa-tag"></div> repository</a>
+        </button>
+      </footer>
+      <!-- /.post-info -->
+    </section>
+    </div>
+    <footer class="footer">
+      <div class="container">
+        <p class="footer-text">&copy; <a href="http://ownport.github.io/notes">ownport.github.io/notes</a> powered by <a href="http://getpelican.com/">pelican</a> and <a href="http://nodotcom.org">nikhil (customized)</a></p>
+      </div>
+    </footer>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+  </body>
+</html>
