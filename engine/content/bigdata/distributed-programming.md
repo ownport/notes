@@ -6,7 +6,7 @@ Tags: hadoop, bigdata
 - [Akela](https://github.com/mozilla-metrics/akela): Mozilla's utility library for Hadoop, HBase, Pig, etc.
 - [AMPLab SIMR](http://databricks.github.io/simr/): run Spark on Hadoop MapReduce v1
 - [AMPLab Succinct](http://succinct.cs.berkeley.edu/wp/wordpress/): Enabling Queries on Compressed Data
-- [Apache Crunch](http://crunch.apache.org/): a simple Java API for tasks like joining and data aggregation that are tedious to implement on plain MapReduce
+- [Apache Crunch](http://crunch.apache.org/): Java library provides a framework for writing, testing, and running MapReduce pipelines. Its goal is to make pipelines that are composed of many user-defined functions simple to write, easy to test, and efficient to run. Running on top of Hadoop MapReduce and Apache Spark, the Apache Crunch™ library is a simple Java API for tasks like joining and data aggregation that are tedious to implement on plain MapReduce. The APIs are especially useful when processing data that does not fit naturally into relational model, such as time series, serialized object formats like protocol buffers or Avro records, and HBase rows and columns. For Scala users, there is the Scrunch API, which is built on top of the Java APIs and includes a REPL (read-eval-print loop) for creating MapReduce pipelines.
 - [Apache DataFu](http://incubator.apache.org/projects/datafu.html): collection of user-defined functions for Hadoop and Pig developed by LinkedIn
 - [Apache Flink](http://flink.incubator.apache.org/): high-performance runtime, and automatic program optimization
 - [Apache Gora](http://gora.apache.org/): framework for in-memory data model and persistence
