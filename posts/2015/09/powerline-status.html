@@ -67,12 +67,12 @@
         <p>Powerline is a statusline plugin for vim, and provides statuslines and prompts for several other applications, including zsh, bash, tmux, IPython, Awesome and Qtile. Documentation <a href="https://powerline.readthedocs.org/en/latest/">https://powerline.readthedocs.org/en/latest/</a></p>
 <h3>Bash prompt</h3>
 <p>Add the following line to your <code>~/.bashrc</code> or <code>/etc/bash.bashrc</code>:</p>
-<div class="highlight"><pre><span class="k">if</span> <span class="o">[</span> -f <span class="sb">`</span>which powerline-daemon<span class="sb">`</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
+<div class="highlight"><pre><span></span><span class="k">if</span> <span class="o">[</span> -f <span class="sb">`</span>which powerline-daemon<span class="sb">`</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
     powerline-daemon -q
 
-    <span class="nb">export </span><span class="nv">POWERLINE_BASH_CONTINUATION</span><span class="o">=</span>1
-    <span class="nb">export </span><span class="nv">POWERLINE_BASH_SELECT</span><span class="o">=</span>1
-    <span class="nb">export </span><span class="nv">POWERLINE_PATH</span><span class="o">=</span><span class="k">$(</span>python -c <span class="s1">&#39;import pkgutil; print pkgutil.get_loader(&quot;powerline&quot;).filename&#39;</span> 2&gt;/dev/null<span class="k">)</span>
+    <span class="nb">export</span> <span class="nv">POWERLINE_BASH_CONTINUATION</span><span class="o">=</span>1
+    <span class="nb">export</span> <span class="nv">POWERLINE_BASH_SELECT</span><span class="o">=</span>1
+    <span class="nb">export</span> <span class="nv">POWERLINE_PATH</span><span class="o">=</span><span class="k">$(</span>python -c <span class="s1">&#39;import pkgutil; print pkgutil.get_loader(&quot;powerline&quot;).filename&#39;</span> 2&gt;/dev/null<span class="k">)</span>
 
     <span class="k">if</span> <span class="o">[[</span> <span class="s2">&quot;</span><span class="nv">$POWERLINE_PATH</span><span class="s2">&quot;</span> !<span class="o">=</span> <span class="s2">&quot;&quot;</span> <span class="o">]]</span><span class="p">;</span> <span class="k">then</span>
         <span class="nb">source</span> <span class="si">${</span><span class="nv">POWERLINE_PATH</span><span class="si">}</span>/bindings/bash/powerline.sh
@@ -85,7 +85,7 @@
 <ul>
 <li>Copy the set of default configuration into a local config dir: </li>
 </ul>
-<div class="highlight"><pre>mkdir ~/.config/powerline
+<div class="highlight"><pre><span></span>mkdir ~/.config/powerline
 cp -R <span class="si">${</span><span class="nv">POWERLINE_PATH</span><span class="si">}</span>/config_files/* ~/.config/powerline
 </pre></div>
 
@@ -94,7 +94,7 @@ cp -R <span class="si">${</span><span class="nv">POWERLINE_PATH</span><span clas
 <ul>
 <li>config.json</li>
 </ul>
-<div class="highlight"><pre><span class="p">{</span>
+<div class="highlight"><pre><span></span><span class="p">{</span>
     <span class="nt">&quot;common&quot;</span><span class="p">:</span> <span class="p">{</span>
         <span class="nt">&quot;term_truecolor&quot;</span><span class="p">:</span> <span class="kc">false</span>
     <span class="p">},</span>
@@ -115,7 +115,7 @@ cp -R <span class="si">${</span><span class="nv">POWERLINE_PATH</span><span clas
 <ul>
 <li>myshell.json</li>
 </ul>
-<div class="highlight"><pre><span class="p">{</span>
+<div class="highlight"><pre><span></span><span class="p">{</span>
     <span class="nt">&quot;segments&quot;</span><span class="p">:</span> <span class="p">{</span>
         <span class="nt">&quot;left&quot;</span><span class="p">:</span> <span class="p">[</span>
                     <span class="p">{</span>
@@ -158,7 +158,7 @@ cp -R <span class="si">${</span><span class="nv">POWERLINE_PATH</span><span clas
 <p>For detailed information on configuring <a href="https://powerline.readthedocs.org/en/latest/configuration.html#">Powerline:Configuration</a></p>
 <h3>Uninstall</h3>
 <p>To uninstall Powerline run the following commands in terminal:</p>
-<div class="highlight"><pre><span class="nv">$ </span>sudo pip uninstall powerline
+<div class="highlight"><pre><span></span>$ sudo pip uninstall powerline
 </pre></div>
 
 

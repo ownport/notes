@@ -66,8 +66,8 @@
       <div class="entry-content">
         <h3>Install</h3>
 <p>Pull Docker images for PostgreSQL and SonarQube</p>
-<div class="highlight"><pre><span class="nv">$ </span>docker pull postgres:9.4
-<span class="nv">$ </span>docker pull sonarqube:5.1.2
+<div class="highlight"><pre><span></span>$ docker pull postgres:9.4
+$ docker pull sonarqube:5.1.2
 </pre></div>
 
 
@@ -80,7 +80,7 @@
 <li>SONARQUBE_JDBC_PASSWORD</li>
 <li>SONARQUBE_JDBC_URL</li>
 </ul>
-<div class="highlight"><pre><span class="nv">$ </span>docker run -d --name sonarqube <span class="se">\</span>
+<div class="highlight"><pre><span></span>$ docker run -d --name sonarqube <span class="se">\</span>
     -p 9000:9000 -p 9092:9092 <span class="se">\</span>
     -e <span class="nv">SONARQUBE_JDBC_USERNAME</span><span class="o">=</span>sonar <span class="se">\</span>
     -e <span class="nv">SONARQUBE_JDBC_PASSWORD</span><span class="o">=</span>sonar <span class="se">\</span>
@@ -91,7 +91,7 @@
 
 <h3>Run</h3>
 <p>The server is started this way:</p>
-<div class="highlight"><pre><span class="nv">$ </span>docker run -d --name sonarqube -p 9000:9000 -p 9092:9092 sonarqube:5.1.2
+<div class="highlight"><pre><span></span>$ docker run -d --name sonarqube -p 9000:9000 -p 9092:9092 sonarqube:5.1.2
 </pre></div>
 
 
@@ -99,7 +99,7 @@
 <ul>
 <li>compose.yml</li>
 </ul>
-<div class="highlight"><pre><span class="n">sonarqube</span><span class="o">:</span>
+<div class="highlight"><pre><span></span><span class="n">sonarqube</span><span class="o">:</span>
   <span class="n">image</span><span class="o">:</span> <span class="s2">&quot;sonarqube:5.1.2&quot;</span>
   <span class="n">ports</span><span class="o">:</span>
    <span class="o">-</span> <span class="s2">&quot;9000:9000&quot;</span>
@@ -117,7 +117,7 @@
 
 
 <h3>SonarQube and Maven</h3>
-<div class="highlight"><pre><span class="nv">$ </span>mvn sonar:sonar -Dsonar.host.url<span class="o">=</span>http://&lt;sonarqube-host&gt;:9000 -Dsonar.jdbc.url<span class="o">=</span>jdbc:postgresql://&lt;sonarqube-host&gt;/sonar
+<div class="highlight"><pre><span></span>$ mvn sonar:sonar -Dsonar.host.url<span class="o">=</span>http://&lt;sonarqube-host&gt;:9000 -Dsonar.jdbc.url<span class="o">=</span>jdbc:postgresql://&lt;sonarqube-host&gt;/sonar
 </pre></div>
 
 

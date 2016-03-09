@@ -68,34 +68,34 @@
 <p>Linux's ext2/ext3 filesystem uses UUID to identify partitions.</p>
 <h4>List all UUIDs</h4>
 <p>Use blkid command-line utility to locate/print block device attributes:</p>
-<div class="highlight"><pre><span class="nv">$ </span>sudo blkid
+<div class="highlight"><pre><span></span>$ sudo blkid
 </pre></div>
 
 
 <p>Alternatively you can list them from their listing in your root filesystem:</p>
-<div class="highlight"><pre>ls -l /dev/disk/by-uuid/
+<div class="highlight"><pre><span></span>ls -l /dev/disk/by-uuid/
 </pre></div>
 
 
 <h4>/etc/fstab file format</h4>
 <p>Simply use following syntax as example:</p>
-<div class="highlight"><pre>UUID={YOUR-UID}    {/path/to/mount/point}               {file-system-type}    defaults,errors=remount-ro 0       1
+<div class="highlight"><pre><span></span>UUID={YOUR-UID}    {/path/to/mount/point}               {file-system-type}    defaults,errors=remount-ro 0       1
 </pre></div>
 
 
 <p>or it will be better to check <code>man fstab</code> for your operation system</p>
 <h4>Mount new partition</h4>
-<div class="highlight"><pre><span class="nv">$ </span>sudo mount -a
+<div class="highlight"><pre><span></span>$ sudo mount -a
 </pre></div>
 
 
 <h4>How to remove GPT from HDD?</h4>
-<div class="highlight"><pre><span class="nv">$ </span>sudo parted /dev/sdX
+<div class="highlight"><pre><span></span>$ sudo parted /dev/sdX
 <span class="o">(</span>parted<span class="o">)</span> mklabel msdos
 Warning: The existing disk label on /dev/sdX will be destroyed and all data on this disk will be lost. Do you want to <span class="k">continue</span>?
 Yes/No? Yes  
 <span class="o">(</span>parted<span class="o">)</span> quit
-<span class="err">$</span>
+$
 </pre></div>
 
 

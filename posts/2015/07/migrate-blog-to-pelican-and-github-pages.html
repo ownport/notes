@@ -65,32 +65,32 @@
 <!-- .entry-content -->
       <div class="entry-content">
         <h3>Installation</h3>
-<div class="highlight"><pre><span class="nv">$ </span>git clone https://github.com/ownport/notes.git
-<span class="nv">$ </span><span class="nb">cd </span>notes
-<span class="nv">$ </span>docker build -t <span class="s1">&#39;ownport.github.io&#39;</span> .
+<div class="highlight"><pre><span></span>$ git clone https://github.com/ownport/notes.git
+$ <span class="nb">cd</span> notes
+$ docker build -t <span class="s1">&#39;ownport.github.io&#39;</span> .
 </pre></div>
 
 
 <h3>Update site</h3>
 <p>Run container and re-generate HTML pages</p>
-<div class="highlight"><pre><span class="nv">$ </span>docker run -ti --rm --name <span class="s1">&#39;notes&#39;</span> -v <span class="si">${</span><span class="nv">pwd</span><span class="si">}</span>/engine:/data/engine ownport.github.io
-<span class="nv">$ </span><span class="nb">cd</span> /data/engine/
-<span class="nv">$ </span>make html
-<span class="nv">$ </span><span class="nb">exit</span>
+<div class="highlight"><pre><span></span>$ docker run -ti --rm --name <span class="s1">&#39;notes&#39;</span> -v <span class="si">${</span><span class="nv">pwd</span><span class="si">}</span>/engine:/data/engine ownport.github.io
+$ <span class="nb">cd</span> /data/engine/
+$ make html
+$ <span class="nb">exit</span>
 </pre></div>
 
 
 <h3>Publishing to GitHub</h3>
 <p><a href="https://help.github.com/categories/20/articles">GitHub Pages</a> offer an easy and convenient way to publish Pelican sites. There are <a href="https://help.github.com/articles/user-organization-and-project-pages">two types of GitHub Pages</a>: Project Pages and User Pages. Pelican sites can be published as both Project Pages and User Pages.</p>
 <p>Outside of container you need to update GitHub pages in gh-pages branch</p>
-<div class="highlight"><pre><span class="nv">$ </span>./scripts/ghp-import engine/output/
-<span class="nv">$ </span>git push origin gh-pages 
+<div class="highlight"><pre><span></span>$ ./scripts/ghp-import engine/output/
+$ git push origin gh-pages 
 </pre></div>
 
 
 <h3>Plugins</h3>
-<div class="highlight"><pre><span class="n">PLUGIN_PATHS</span> <span class="o">=</span> <span class="p">[</span><span class="s">&#39;plugins&#39;</span><span class="p">]</span>
-<span class="n">PLUGINS</span> <span class="o">=</span> <span class="p">[</span><span class="s">&#39;sitemap&#39;</span><span class="p">,]</span>
+<div class="highlight"><pre><span></span><span class="n">PLUGIN_PATHS</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;plugins&#39;</span><span class="p">]</span>
+<span class="n">PLUGINS</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;sitemap&#39;</span><span class="p">,]</span>
 </pre></div>
 
 
@@ -101,17 +101,17 @@
 </ul>
 <h3>Sitemap</h3>
 <p>Add to pelicanconf.py</p>
-<div class="highlight"><pre><span class="n">SITEMAP</span> <span class="o">=</span> <span class="p">{</span>
-    <span class="s">&#39;format&#39;</span><span class="p">:</span> <span class="s">&#39;xml&#39;</span><span class="p">,</span>
-    <span class="s">&#39;priorities&#39;</span><span class="p">:</span> <span class="p">{</span>
-        <span class="s">&#39;articles&#39;</span><span class="p">:</span> <span class="mf">0.5</span><span class="p">,</span>
-        <span class="s">&#39;indexes&#39;</span><span class="p">:</span> <span class="mf">0.5</span><span class="p">,</span>
-        <span class="s">&#39;pages&#39;</span><span class="p">:</span> <span class="mf">0.5</span>
+<div class="highlight"><pre><span></span><span class="n">SITEMAP</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;format&#39;</span><span class="p">:</span> <span class="s1">&#39;xml&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;priorities&#39;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s1">&#39;articles&#39;</span><span class="p">:</span> <span class="mf">0.5</span><span class="p">,</span>
+        <span class="s1">&#39;indexes&#39;</span><span class="p">:</span> <span class="mf">0.5</span><span class="p">,</span>
+        <span class="s1">&#39;pages&#39;</span><span class="p">:</span> <span class="mf">0.5</span>
     <span class="p">},</span>
-    <span class="s">&#39;changefreqs&#39;</span><span class="p">:</span> <span class="p">{</span>
-        <span class="s">&#39;articles&#39;</span><span class="p">:</span> <span class="s">&#39;monthly&#39;</span><span class="p">,</span>
-        <span class="s">&#39;indexes&#39;</span><span class="p">:</span> <span class="s">&#39;daily&#39;</span><span class="p">,</span>
-        <span class="s">&#39;pages&#39;</span><span class="p">:</span> <span class="s">&#39;monthly&#39;</span>
+    <span class="s1">&#39;changefreqs&#39;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s1">&#39;articles&#39;</span><span class="p">:</span> <span class="s1">&#39;monthly&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;indexes&#39;</span><span class="p">:</span> <span class="s1">&#39;daily&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;pages&#39;</span><span class="p">:</span> <span class="s1">&#39;monthly&#39;</span>
     <span class="p">}</span>
 <span class="p">}</span>
 </pre></div>
