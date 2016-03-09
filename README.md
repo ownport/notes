@@ -1,12 +1,12 @@
 # ownport.github.io
 
-Personal website, based on [pelican](http://blog.getpelican.com/). Homepage: [http://ownport.github.io/blog/](http://ownport.github.io/blog/)
+Personal website, based on [pelican](http://blog.getpelican.com/). Homepage: [http://ownport.github.io/notes/](http://ownport.github.io/notes/)
 
 
 ## Installation
 
 ```sh
-$ docker build -t 'ownport.github.io' .
+$ docker pull ownport/pelican:latest
 ```
 
 ## Update site
