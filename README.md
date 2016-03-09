@@ -14,9 +14,10 @@ $ docker pull ownport/pelican:latest
 Run container and re-generate HTML pages
 
 ```sh
-$ docker run -ti --rm --name 'notes' -v $(pwd)/engine:/data/engine ownport.github.notes
+$ make run-container
 $ cd /data/engine/
-$ make html
+$ manage clean 
+$ manage html
 $ exit
 ```
 
