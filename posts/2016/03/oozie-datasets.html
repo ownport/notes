@@ -84,15 +84,48 @@
 <p>Since the Datasets is a collection of datasets, they can be represented by a collection of individual Datasets and include file representation. </p>
 <p>As best practice for organizing data inside a cluster, you will represent them as Dataset and store all the logical datasets.xml files in one place on HDFS so that all Coordinator jobs can reuse them.</p>
 <p>Dataset definition needs the following details:</p>
-<p>Field             || Definition               || Example
-------------------+---------------------------+-------------------------------
-name              | Dataset name              | pressrelease
-frequency         | Indicates time in minutes at which data is created and frequency uses EL expressions to represent time | ${coord:days(1)
-initial-instance  | The UTC date and time of the initial instance of the Dataset | 2015-08-15T00:00Z
-timezone          | The timezone of the Dataset | Australia/Sydney
-url-template      | The URI template that identifies  the Dataset is made up of constants ( YEAR ) and variables | namenode/learn_oozie/ch04/input/pressrelase/{YEAR}/{MONTH}/{DAY}
-done-flag         | instance is ready to be consumed | _SUCCESS file</p>
-<h2>The <done-flag> tag</h2>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Definition</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>name</td>
+<td>Dataset name</td>
+<td>pressrelease</td>
+</tr>
+<tr>
+<td>frequency</td>
+<td>Indicates time in minutes at which data is created and frequency uses EL expressions to represent time</td>
+<td>${coord:days(1)</td>
+</tr>
+<tr>
+<td>initial-instance</td>
+<td>The UTC date and time of the initial instance of the Dataset</td>
+<td>2015-08-15T00:00Z</td>
+</tr>
+<tr>
+<td>timezone</td>
+<td>The timezone of the Dataset</td>
+<td>Australia/Sydney</td>
+</tr>
+<tr>
+<td>url-template</td>
+<td>The URI template that identifies  the Dataset is made up of constants ( YEAR ) and variables</td>
+<td YEAR="YEAR">namenode/learn_oozie/ch04/input/pressrelase/</td>
+</tr>
+<tr>
+<td>done-flag</td>
+<td>instance is ready to be consumed</td>
+<td>_SUCCESS file</td>
+</tr>
+</tbody>
+</table>
+<h4>The <done-flag> tag</h4>
 <p>The <code>&lt;done-flag&gt;</code> tag indicates when a dataset instance is ready to be processed. Here are the various options for <code>&lt;done-flag&gt;</code>:</p>
 <ul>
 <li>If the <done-flag> tag is not present, the Coordinator will not start till the file named _SUCCESS is present in the directory. In our file-based  load use case the process that is copying the files to HDFS will also create the _SUCCESS flag using the <code>hdfs fs -touchz</code> command.</li>
