@@ -6,14 +6,19 @@
       {% endblock %}
       {% for article in articles_page.object_list %}
       <div class="row">
-        <div class="col-sm-3">
+<!--         <div class="col-sm-3">
           <span class="text-muted">{{article.locale_date}}</span>
         </div>
-        <div class="col-sm-9">
+ -->  
+      <div class="col-sm-12">
           <p>
-            <a href="{{ SITEURL }}/{{ article.url }}" rel="bookmark" title="Permalink to {{ article.title|striptags }}">{{ article.title|striptags }}</a>
+            <h4>
+              <a href="{{ SITEURL }}/{{ article.url }}" rel="bookmark" title="Permalink to {{ article.title|striptags }}">{{ article.title|striptags }}</a>
+            </h4>
+            <span class="text-muted">{{article.locale_date}}</span>
             <br/>
             {{ article.summary|striptags }}
+            
           </p>
         </div>
       </div>
