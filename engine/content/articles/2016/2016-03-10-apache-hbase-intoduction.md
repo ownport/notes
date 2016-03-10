@@ -1,5 +1,5 @@
 Title: Apache HBase Intoduction
-Date: 2016-03-11 00:10
+Date: 2016-03-10 00:10
 Tags: hadoop, bigdata, hbase, commands
 
 Original article: [https://learnhbase.wordpress.com/](https://learnhbase.wordpress.com/)
