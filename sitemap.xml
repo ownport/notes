@@ -5,35 +5,35 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>http://ownport.github.io/notes/</loc>
-<lastmod>2016-03-09T22:28:43-00:00</lastmod>
+<lastmod>2016-03-10T05:16:31-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://ownport.github.io/notes/archives.html</loc>
-<lastmod>2016-03-09T22:28:43-00:00</lastmod>
+<lastmod>2016-03-10T05:16:31-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://ownport.github.io/notes/tags.html</loc>
-<lastmod>2016-03-09T22:28:43-00:00</lastmod>
+<lastmod>2016-03-10T05:16:31-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://ownport.github.io/notes/categories.html</loc>
-<lastmod>2016-03-09T22:28:43-00:00</lastmod>
+<lastmod>2016-03-10T05:16:31-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://ownport.github.io/notes/pages/search.html</loc>
-<lastmod>2016-03-09T22:28:43-00:00</lastmod>
+<lastmod>2016-03-10T05:16:31-00:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
@@ -48,6 +48,13 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
 <loc>http://ownport.github.io/notes/posts/2016/03/oozie-datasets.html</loc>
 <lastmod>2016-03-11T00:10:00+02:00</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>http://ownport.github.io/notes/posts/2016/03/object-storages.html</loc>
+<lastmod>2016-03-10T07:14:00+02:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
@@ -684,7 +691,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>http://ownport.github.io/notes/tag/rest.html</loc>
-<lastmod>2015-09-16T22:30:00+02:02</lastmod>
+<lastmod>2016-03-10T07:14:00+02:02</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -810,7 +817,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>http://ownport.github.io/notes/tag/amazon.html</loc>
-<lastmod>2015-09-12T22:30:00+02:02</lastmod>
+<lastmod>2016-03-10T07:14:00+02:02</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -1476,6 +1483,13 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
 <loc>http://ownport.github.io/notes/tag/stash.html</loc>
 <lastmod>2015-03-25T00:00:00+02:02</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>http://ownport.github.io/notes/tag/object-storage.html</loc>
+<lastmod>2016-03-10T07:14:00+02:02</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
