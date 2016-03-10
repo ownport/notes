@@ -61,14 +61,19 @@
         <li class="active"><div class="fa fa-lg fa-tag"></div> pelican <span class="badge">1</span></li>
       </ol>
       <div class="row">
-        <div class="col-sm-3">
+<!--         <div class="col-sm-3">
           <span class="text-muted">Fri 24 July 2015</span>
         </div>
-        <div class="col-sm-9">
+ -->  
+      <div class="col-sm-12">
           <p>
-            <a href="http://ownport.github.io/notes/posts/2015/07/migrate-blog-to-pelican-and-github-pages.html" rel="bookmark" title="Permalink to Migrate blog to Pelican and GitHub Pages">Migrate blog to Pelican and GitHub Pages</a>
+            <h4>
+              <a href="http://ownport.github.io/notes/posts/2015/07/migrate-blog-to-pelican-and-github-pages.html" rel="bookmark" title="Permalink to Migrate blog to Pelican and GitHub Pages">Migrate blog to Pelican and GitHub Pages</a>
+            </h4>
+            <span class="text-muted">Fri 24 July 2015</span>
             <br/>
             Installation $ git clone https://github.com/ownport/notes.git $ cd notes $ docker build -t 'ownport.github.io' . Update site Run container and re-generate HTML pages $ docker run -ti --rm --name 'notes' -v ${pwd}/engine:/data/engine ownport.github.io $ cd /data/engine/ $ make html $ exit Publishing to GitHub GitHub Pages ...
+            
           </p>
         </div>
       </div>
