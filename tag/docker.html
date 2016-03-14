@@ -57,9 +57,26 @@
     <section id="content" class="content">
       <ol class="breadcrumb">
         <li><a href="http://ownport.github.io/notes"><div class="fa fa-lg fa-home"></div><span class="hidden-xs"> Home</span></a></li>
-        <li><a href="http://ownport.github.io/notes/tags.html"><div class="fa fa-lg fa-tags"></div> Tags <span class="badge">145</span></a></li>
-        <li class="active"><div class="fa fa-lg fa-tag"></div> docker <span class="badge">16</span></li>
+        <li><a href="http://ownport.github.io/notes/tags.html"><div class="fa fa-lg fa-tags"></div> Tags <span class="badge">146</span></a></li>
+        <li class="active"><div class="fa fa-lg fa-tag"></div> docker <span class="badge">17</span></li>
       </ol>
+      <div class="row">
+<!--         <div class="col-sm-3">
+          <span class="text-muted">Mon 14 March 2016</span>
+        </div>
+ -->  
+      <div class="col-sm-12">
+          <p>
+            <h4>
+              <a href="http://ownport.github.io/notes/posts/2016/03/docker-aliasesfunctions.html" rel="bookmark" title="Permalink to Docker aliases/functions">Docker aliases/functions</a>
+            </h4>
+            <span class="text-muted">Mon 14 March 2016</span>
+            <br/>
+            The content of .bashrc file: # ---------------------------------------------------------------------- # Docker aliases/functions # d-help() { declare -F | grep d- | cut -d " " -f 3; } # remove exited containers d-rm-ec() { EXITED_CONTAINERS=$(docker ps -a | grep Exited | cut -d " " -f 1;); if [ -z $EXITED_CONTAINERS ]; then echo "No exited containers"; else docker rm $EXITED_CONTAINERS; fi } # remove none images d-rm-ni() { NONE_IMAGES=$(docker ...
+            
+          </p>
+        </div>
+      </div>
       <div class="row">
 <!--         <div class="col-sm-3">
           <span class="text-muted">Mon 14 September 2015</span>
@@ -209,23 +226,6 @@
             <span class="text-muted">Fri 19 June 2015</span>
             <br/>
             Ansible: Up and Running Fabric8 Vagrant Box Cumulus Linux — The Foundation of OpenStack Automation Cumulus Linux — The Foundation of OpenStack Automation, another link Cache-as-a-Service (CaaS) How To Do Production Ready Docker Metrics Persisting Data with Docker Containers Orchestrating Docker with Terraform and Consul by Mitchell Hashimoto
-            
-          </p>
-        </div>
-      </div>
-      <div class="row">
-<!--         <div class="col-sm-3">
-          <span class="text-muted">Mon 01 June 2015</span>
-        </div>
- -->  
-      <div class="col-sm-12">
-          <p>
-            <h4>
-              <a href="http://ownport.github.io/notes/posts/2015/06/links-2015-06-01.html" rel="bookmark" title="Permalink to Links / 2015-06-01">Links / 2015-06-01</a>
-            </h4>
-            <span class="text-muted">Mon 01 June 2015</span>
-            <br/>
-            Consul as a Monitoring Service Microservices: CI with LambdaCD – The underlying infrastructure Building Network Tools using Docker Continuous Integration and Delivery with Docker OpenDaylight is One of the Best Controllers for OpenStack — Here’s How to Implement It DevOps Connect: DevSecOps Edition, 10+ Hours of Video Available
             
           </p>
         </div>

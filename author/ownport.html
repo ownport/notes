@@ -58,8 +58,25 @@
       <ol class="breadcrumb">
         <li><a href="http://ownport.github.io/notes"><div class="fa fa-lg fa-home"></div><span class="hidden-xs"> Home</span></a></li>
         <li><a href="http://ownport.github.io/notes/authors.html"><div class="fa fa-lg fa-pencil"></div><div class="fa fa-pencil"></div> Authors <span class="badge">1</span></a></li>
-        <li class="active"><div class="fa fa-lg fa-pencil"></div> ownport <span class="badge">86</span></li>
+        <li class="active"><div class="fa fa-lg fa-pencil"></div> ownport <span class="badge">87</span></li>
       </ol>
+      <div class="row">
+<!--         <div class="col-sm-3">
+          <span class="text-muted">Mon 14 March 2016</span>
+        </div>
+ -->  
+      <div class="col-sm-12">
+          <p>
+            <h4>
+              <a href="http://ownport.github.io/notes/posts/2016/03/docker-aliasesfunctions.html" rel="bookmark" title="Permalink to Docker aliases/functions">Docker aliases/functions</a>
+            </h4>
+            <span class="text-muted">Mon 14 March 2016</span>
+            <br/>
+            The content of .bashrc file: # ---------------------------------------------------------------------- # Docker aliases/functions # d-help() { declare -F | grep d- | cut -d " " -f 3; } # remove exited containers d-rm-ec() { EXITED_CONTAINERS=$(docker ps -a | grep Exited | cut -d " " -f 1;); if [ -z $EXITED_CONTAINERS ]; then echo "No exited containers"; else docker rm $EXITED_CONTAINERS; fi } # remove none images d-rm-ni() { NONE_IMAGES=$(docker ...
+            
+          </p>
+        </div>
+      </div>
       <div class="row">
 <!--         <div class="col-sm-3">
           <span class="text-muted">Thu 10 March 2016</span>
@@ -209,23 +226,6 @@
             <span class="text-muted">Mon 05 October 2015</span>
             <br/>
             CodeAcademy One of the most popular free places to learn coding is CodeAcademy. In fact, more than 24 million people have already learned how to code through this educational company’s engaging experience. At CodeAcademy, you can dive right in and take courses that teach you everything from HTML & CSS ...
-            
-          </p>
-        </div>
-      </div>
-      <div class="row">
-<!--         <div class="col-sm-3">
-          <span class="text-muted">Tue 22 September 2015</span>
-        </div>
- -->  
-      <div class="col-sm-12">
-          <p>
-            <h4>
-              <a href="http://ownport.github.io/notes/posts/2015/09/how-to-use-uuid-to-mount-partitions.html" rel="bookmark" title="Permalink to How To Use UUID To Mount Partitions">How To Use UUID To Mount Partitions</a>
-            </h4>
-            <span class="text-muted">Tue 22 September 2015</span>
-            <br/>
-            A Universally Unique Identifier (UUID) is an identifier standard used in software construction, standardized by the Open Software Foundation (OSF) as part of the Distributed Computing Environment (DCE). The intent of UUIDs is to enable distributed systems to uniquely identify information without significant central coordination. Thus, anyone can create a ...
             
           </p>
         </div>

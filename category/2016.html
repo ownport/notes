@@ -58,8 +58,25 @@
       <ol class="breadcrumb">
         <li><a href="http://ownport.github.io/notes"><div class="fa fa-lg fa-home"></div><span class="hidden-xs"> Home</span></a></li>
         <li><a href="http://ownport.github.io/notes/categories.html"><div class="fa fa-lg fa-folder-open"></div> Categories <span class="badge">6</span></a></li>
-        <li class="active"><div class="fa fa-lg fa-folder-open"></div> 2016 <span class="badge">3</span></li>
+        <li class="active"><div class="fa fa-lg fa-folder-open"></div> 2016 <span class="badge">4</span></li>
       </ol>
+      <div class="row">
+<!--         <div class="col-sm-3">
+          <span class="text-muted">Mon 14 March 2016</span>
+        </div>
+ -->  
+      <div class="col-sm-12">
+          <p>
+            <h4>
+              <a href="http://ownport.github.io/notes/posts/2016/03/docker-aliasesfunctions.html" rel="bookmark" title="Permalink to Docker aliases/functions">Docker aliases/functions</a>
+            </h4>
+            <span class="text-muted">Mon 14 March 2016</span>
+            <br/>
+            The content of .bashrc file: # ---------------------------------------------------------------------- # Docker aliases/functions # d-help() { declare -F | grep d- | cut -d " " -f 3; } # remove exited containers d-rm-ec() { EXITED_CONTAINERS=$(docker ps -a | grep Exited | cut -d " " -f 1;); if [ -z $EXITED_CONTAINERS ]; then echo "No exited containers"; else docker rm $EXITED_CONTAINERS; fi } # remove none images d-rm-ni() { NONE_IMAGES=$(docker ...
+            
+          </p>
+        </div>
+      </div>
       <div class="row">
 <!--         <div class="col-sm-3">
           <span class="text-muted">Thu 10 March 2016</span>
