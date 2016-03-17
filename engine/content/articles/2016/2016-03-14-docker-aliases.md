@@ -54,4 +54,5 @@ d-ex-i() { docker exec -ti $@; }
 - [tcnksm/docker-alias](https://github.com/tcnksm/docker-alias) Docker alias and functions
 - [Useful Docker Bash Functions And Aliases](http://kartar.net/2014/03/useful-docker-bash-functions-and-aliases/)
 - [15 Quick Docker Tips](https://www.ctl.io/developers/blog/post/15-quick-docker-tips/)
+- [Docker Completion](https://github.com/docker/docker/tree/master/contrib/completion)
 
