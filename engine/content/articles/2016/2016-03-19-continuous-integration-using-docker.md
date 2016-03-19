@@ -14,7 +14,6 @@ _Continuous Integration is a software development practice where members of a te
 
 ### Links
 
-- [Continuous Integration](http://www.martinfowler.com/articles/continuousIntegration.html)
 - [marcelbirkner/docker-ci-tool-stack](Docker Infrastructure via docker-compose (Jenkins, SonarQube, Nexus, GitLab))
 - [Using Jenkins Job DSL for Job Lifecycle Management](https://blog.codecentric.de/en/2015/10/using-jenkins-job-dsl-for-job-lifecycle-management)
 - [Jenkins/Job DSL Plugin](https://wiki.jenkins-ci.org/display/JENKINS/Job+DSL+Plugin) The job-dsl-plugin allows the programmatic creation of projects using a DSL. Pushing job creation into a script allows you to automate and standardize your Jenkins installation, unlike anything possible before.

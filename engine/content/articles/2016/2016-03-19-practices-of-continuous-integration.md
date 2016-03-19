@@ -2,6 +2,8 @@ Title: Practices of Continuous Integration
 Date: 2016-03-19 09:59
 Tags: continuous, integration
 
+Original article: [Continuous Integration Platform Using Docker Containers: Jenkins, SonarQube, Nexus, GitLab](http://www.sonatype.org/nexus/2016/03/11/continuous-integration-platform-using-docker-containers-jenkins-sonarqube-nexus-gitlab/)
+
 
 #### Maintain a Single Source Repository
 
@@ -81,3 +83,8 @@ All CI tools like Jenkins, GitLab, Nexus and SonarQube should be accessible for 
 Jenkins is not just great for compiling source code, it can also be used to execute shell and bash scripts on remote servers or run Puppet and Ansible scripts to provision servers. Over the last years configuration management tools like Ansible, Puppet, Chef and CFEngine have come a long way. It has become a good practice to store these configuration management scripts in Git repositories just like your source code. You should treat your infrastructure just like your source code. Therefore the operation team can use the full power of a modern version control system and does not need to keep their scripts on network shares.
 
 To deploy your software you should use a single deployment script. This deployment script will be used for deploying to every environment. As a result you automatically test the script before doing an actual production deployment.
+
+### Links
+
+- [Continuous Integration](http://www.martinfowler.com/articles/continuousIntegration.html)
+
