@@ -64,7 +64,8 @@
       </header>
 <!-- .entry-content -->
       <div class="entry-content">
-        <h4>Maintain a Single Source Repository</h4>
+        <p>Original article: <a href="http://www.sonatype.org/nexus/2016/03/11/continuous-integration-platform-using-docker-containers-jenkins-sonarqube-nexus-gitlab/">Continuous Integration Platform Using Docker Containers: Jenkins, SonarQube, Nexus, GitLab</a></p>
+<h4>Maintain a Single Source Repository</h4>
 <p>Everything you need to build your source code and run your software should be kept in a version control system (VCS). </p>
 <h4>Automate the Build</h4>
 <p>A central impartial instance that takes care of compiling and packaging the build artifact is crucial. That’s were Jenkins comes into play. Jenkins manages all build, test and deploy jobs for all software artifacts. Every developer should have access to Jenkins to be able to access log files, test reports and the job configuration. This gives software teams full transparency of the build process.</p>
@@ -113,6 +114,10 @@
 <h4>Automate Deployment</h4>
 <p>Jenkins is not just great for compiling source code, it can also be used to execute shell and bash scripts on remote servers or run Puppet and Ansible scripts to provision servers. Over the last years configuration management tools like Ansible, Puppet, Chef and CFEngine have come a long way. It has become a good practice to store these configuration management scripts in Git repositories just like your source code. You should treat your infrastructure just like your source code. Therefore the operation team can use the full power of a modern version control system and does not need to keep their scripts on network shares.</p>
 <p>To deploy your software you should use a single deployment script. This deployment script will be used for deploying to every environment. As a result you automatically test the script before doing an actual production deployment.</p>
+<h3>Links</h3>
+<ul>
+<li><a href="http://www.martinfowler.com/articles/continuousIntegration.html">Continuous Integration</a></li>
+</ul>
       </div>
 <!-- /.entry-content -->
       <footer class="post-info text-muted">
