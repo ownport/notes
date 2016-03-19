@@ -4,7 +4,7 @@
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
   <head>
-    <title>Docker aliases/functions - ownport.github.io/notes</title>
+    <title>Continuous Integration using Docker - ownport.github.io/notes</title>
     <meta name="google-site-verification" content="LmB1dDy5ueSqYPVOs6z4ylRQgNDxelgPYHsRLLtCG7c" />
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -57,66 +57,28 @@
     <section id="content" class="article content">
       <header>
         <h2 class="entry-title">
-          Docker aliases/functions
+          Continuous Integration using Docker
         </h2>
         
-        <div class="text-muted">Mon 14 March 2016</div>
+        <div class="text-muted">Sat 19 March 2016</div>
       </header>
 <!-- .entry-content -->
       <div class="entry-content">
-        <p>The content of .bashrc file:</p>
-<div class="highlight"><pre><span></span><span class="c1"># ----------------------------------------------------------------------</span>
-<span class="c1"># Docker aliases/functions</span>
-<span class="c1">#</span>
-
-d-help<span class="o">()</span> <span class="o">{</span> <span class="nb">declare</span> -F <span class="p">|</span> grep d- <span class="p">|</span> cut -d <span class="s2">&quot; &quot;</span> -f 3<span class="p">;</span> <span class="o">}</span>
-
-<span class="c1"># remove exited containers</span>
-d-rm-ec<span class="o">()</span> <span class="o">{</span>
-    <span class="nv">EXITED_CONTAINERS</span><span class="o">=</span><span class="k">$(</span>docker ps -a <span class="p">|</span> grep Exited <span class="p">|</span> cut -d <span class="s2">&quot; &quot;</span> -f 1<span class="p">;</span><span class="k">)</span><span class="p">;</span>
-    <span class="k">if</span> <span class="o">[</span> -z <span class="nv">$EXITED_CONTAINERS</span> <span class="o">]</span><span class="p">;</span>
-    <span class="k">then</span>
-        <span class="nb">echo</span> <span class="s2">&quot;No exited containers&quot;</span><span class="p">;</span>
-    <span class="k">else</span>
-        docker rm <span class="nv">$EXITED_CONTAINERS</span><span class="p">;</span>
-    <span class="k">fi</span>
-<span class="o">}</span>
-
-<span class="c1"># remove none images</span>
-d-rm-ni<span class="o">()</span> <span class="o">{</span>
-    <span class="nv">NONE_IMAGES</span><span class="o">=</span><span class="k">$(</span>docker images <span class="p">|</span> grep <span class="s2">&quot;^&lt;none&gt;&quot;</span> <span class="p">|</span> awk <span class="s1">&#39;{print $3}&#39;</span> <span class="k">)</span>
-    <span class="k">if</span> <span class="o">[</span> -z <span class="nv">$NONE_IMAGES</span> <span class="o">]</span><span class="p">;</span>
-    <span class="k">then</span>
-        <span class="nb">echo</span> <span class="s2">&quot;No none images&quot;</span><span class="p">;</span>
-    <span class="k">else</span>
-        docker rmi <span class="nv">$NONE_IMAGES</span><span class="p">;</span>
-    <span class="k">fi</span>
-<span class="o">}</span>
-
-<span class="c1"># get container&#39;s IP address</span>
-d-ip<span class="o">()</span> <span class="o">{</span> docker inspect --format <span class="s1">&#39;{{ .NetworkSettings.IPAddress }}&#39;</span> <span class="nv">$1</span><span class="p">;</span> <span class="o">}</span>
-
-<span class="c1"># get docker images</span>
-d-im<span class="o">()</span> <span class="o">{</span> docker images<span class="p">;</span> <span class="o">}</span>
-
-<span class="c1"># get all container processes</span>
-d-ps-a<span class="o">()</span> <span class="o">{</span> docker ps -a<span class="p">;</span> <span class="o">}</span>
-
-<span class="c1"># run interactive container</span>
-d-run-i<span class="o">()</span> <span class="o">{</span> docker run -ti --rm <span class="nv">$@</span><span class="p">;</span> <span class="o">}</span>
-
-<span class="c1"># execute interactive container</span>
-d-ex-i<span class="o">()</span> <span class="o">{</span> docker <span class="nb">exec</span> -ti <span class="nv">$@</span><span class="p">;</span> <span class="o">}</span>
-</pre></div>
-
-
+        <p>Original article: <a href="http://www.sonatype.org/nexus/2016/03/11/continuous-integration-platform-using-docker-containers-jenkins-sonarqube-nexus-gitlab/">Continuous Integration Platform Using Docker Containers: Jenkins, SonarQube, Nexus, GitLab</a></p>
+<p><em>Continuous Integration is a software development practice where members of a team integrate their work frequently, usually each person integrates at least daily - leading to multiple integrations per day. Each integration is verified by an automated build (including test) to detect integration errors as quickly as possible. Many teams find that this approach leads to significantly reduced integration problems and allows a team to develop cohesive software more rapidly. This article is a quick overview of Continuous Integration summarizing the technique and its current usage.</em> (c) Martin Fowler</p>
+<ul>
+<li><a href="https://about.gitlab.com/">GitLab</a> is used for storing the source code in Git repositories and is a great alternative to GitHub.com. GitLab uses a PostgreSQL database for storing user information and Redis for storing tasks. For more details on the Redis and PostgreSQL Docker containers have a look at <a href="https://gitlab.com/gitlab-org/gitlab-ce/blob/master/doc/development/architecture.md">GitLab architecture</a>.</li>
+<li><a href="https://jenkins-ci.org/">Jenkins</a> is used for automating the software development process. </li>
+<li><a href="http://www.sonatype.org/nexus/">Nexus</a> is a typical Maven Artifact Repository. The Maven build uses Nexus as a Proxy Repository for third party libs. After the build the packaged artifacts are deployed to the Nexus Release Repository.</li>
+<li><a href="http://www.sonarqube.org/">SonarQube</a> is the most widespread Source Code Quality Management Tool. As part of the CI build, Jenkins triggers a static source code analysis and the results are stored in SonarQube. It uses typical code analysis frameworks like FindBugs, Checkstyle, PMD and others.</li>
+</ul>
 <h3>Links</h3>
 <ul>
-<li><a href="https://github.com/tcnksm/docker-alias">tcnksm/docker-alias</a> Docker alias and functions</li>
-<li><a href="http://kartar.net/2014/03/useful-docker-bash-functions-and-aliases/">Useful Docker Bash Functions And Aliases</a></li>
-<li><a href="https://www.ctl.io/developers/blog/post/15-quick-docker-tips/">15 Quick Docker Tips</a></li>
-<li><a href="https://github.com/docker/docker/tree/master/contrib/completion">Docker Completion</a></li>
-<li><a href="https://github.com/wsargent/docker-cheat-sheet">Docker Cheat Sheet</a></li>
+<li><a href="http://www.martinfowler.com/articles/continuousIntegration.html">Continuous Integration</a></li>
+<li><a href="Docker Infrastructure via docker-compose (Jenkins, SonarQube, Nexus, GitLab)">marcelbirkner/docker-ci-tool-stack</a></li>
+<li><a href="https://blog.codecentric.de/en/2015/10/using-jenkins-job-dsl-for-job-lifecycle-management">Using Jenkins Job DSL for Job Lifecycle Management</a></li>
+<li><a href="https://wiki.jenkins-ci.org/display/JENKINS/Job+DSL+Plugin">Jenkins/Job DSL Plugin</a> The job-dsl-plugin allows the programmatic creation of projects using a DSL. Pushing job creation into a script allows you to automate and standardize your Jenkins installation, unlike anything possible before.</li>
+<li><a href="https://github.com/jenkinsci/job-dsl-plugin/wiki/Tutorial---Using-the-Jenkins-Job-DSL">Tutorial Using the Jenkins Job DSL</a></li>
 </ul>
       </div>
 <!-- /.entry-content -->
@@ -128,7 +90,22 @@ d-ex-i<span class="o">()</span> <span class="o">{</span> docker <span class="nb"
           <a href="http://ownport.github.io/notes/tag/docker.html"><div class="fa fa-lg fa-tag"></div> docker</a>
         </button>
         <button type="button" class="btn btn-default">
-          <a href="http://ownport.github.io/notes/tag/alias.html"><div class="fa fa-lg fa-tag"></div> alias</a>
+          <a href="http://ownport.github.io/notes/tag/continuous.html"><div class="fa fa-lg fa-tag"></div> continuous</a>
+        </button>
+        <button type="button" class="btn btn-default">
+          <a href="http://ownport.github.io/notes/tag/integration.html"><div class="fa fa-lg fa-tag"></div> integration</a>
+        </button>
+        <button type="button" class="btn btn-default">
+          <a href="http://ownport.github.io/notes/tag/jenkins.html"><div class="fa fa-lg fa-tag"></div> jenkins</a>
+        </button>
+        <button type="button" class="btn btn-default">
+          <a href="http://ownport.github.io/notes/tag/sonarqube.html"><div class="fa fa-lg fa-tag"></div> sonarqube</a>
+        </button>
+        <button type="button" class="btn btn-default">
+          <a href="http://ownport.github.io/notes/tag/nexus.html"><div class="fa fa-lg fa-tag"></div> nexus</a>
+        </button>
+        <button type="button" class="btn btn-default">
+          <a href="http://ownport.github.io/notes/tag/gitlab.html"><div class="fa fa-lg fa-tag"></div> gitlab</a>
         </button>
       </footer>
       <!-- /.post-info -->
